@@ -1,5 +1,35 @@
-<app-header></app-header>
-<div class="container">
-  <app-products></app-products>
+<div
+  class="app-shell"
+  [class.sidebar-collapsed]="sidebarCollapsed"
+  dir="rtl">
+
+  <!-- RIGHT SIDEBAR -->
+  <app-sidebar
+    [collapsed]="sidebarCollapsed"
+    (collapsedChange)="sidebarCollapsed = $event">
+  </app-sidebar>
+
+
+  <!-- LEFT APPLICATION AREA -->
+  <div class="app-content">
+
+    <!-- HEADER -->
+    <app-header
+      (menuToggle)="toggleSidebar()">
+    </app-header>
+
+    <!-- PAGE CONTENT -->
+    <main class="page-content">
+      <div class="container">
+       <app-products></app-products>
+      </div>
+      <router-outlet></router-outlet>
+
+    </main>
+
+    <!-- FOOTER -->
+    <app-footer></app-footer>
+
+  </div>
+
 </div>
-<app-footer></app-footer>
