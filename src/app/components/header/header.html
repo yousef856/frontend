@@ -1,36 +1,109 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-        </li>
-      </ul>
-      <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
-    </div>
+<header class="header" dir="rtl">
+
+  <!-- Logo on mobile / collapsed area -->
+  <div class="mobile-brand">
+    <span class="brand-icon">🌿</span>
+    <span class="brand-name">NGO ERP</span>
   </div>
-</nav>
+
+
+  <!-- Search -->
+  <div class="header-search">
+
+    <span class="search-icon">
+      🔍
+    </span>
+
+    <input
+      type="text"
+      placeholder="ابحث عن مستفيد، رقم الهوية، رقم الملف ..."
+    />
+
+    <span class="search-shortcut">
+      ⌘
+    </span>
+
+  </div>
+
+
+  <!-- Header Actions -->
+  <div class="header-actions">
+
+    <!-- Notifications -->
+    <button
+      class="header-button"
+      title="الإشعارات"
+      (click)="openNotifications()">
+
+      <span class="icon">🔔</span>
+
+      @if (notificationCount > 0) {
+        <span class="notification-badge">
+          {{ notificationCount }}
+        </span>
+      }
+
+    </button>
+
+
+    <!-- Messages -->
+    <button
+      class="header-button"
+      title="الرسائل"
+      (click)="openMessages()">
+
+      <span class="icon">💬</span>
+
+    </button>
+
+
+    <!-- Calendar -->
+    <button
+      class="header-button"
+      title="التقويم"
+      (click)="openCalendar()">
+
+      <span class="icon">📅</span>
+
+    </button>
+
+
+    <!-- User -->
+    <button
+      class="user-profile"
+      (click)="openProfile()">
+
+      <div class="user-avatar">
+        <img
+          src="assets/images/user.jpg"
+          alt="أحمد محمد">
+      </div>
+
+      <div class="user-info">
+
+        <strong>أحمد محمد</strong>
+
+        <span>مدير النظام</span>
+
+      </div>
+
+      <span class="arrow">
+       ⌄
+      </span>
+
+    </button>
+
+
+    <!-- Sidebar Toggle -->
+    <button
+      class="menu-button"
+      title="القائمة"
+      (click)="toggleMenu()">
+
+      ☰
+
+    </button>
+
+  </div>
+
+</header>
