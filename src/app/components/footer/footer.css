@@ -1,5 +1,6 @@
 .site-footer {
   color: #6c757d;
+  border-color: #e5e9e6 !important;
 }
 
 .footer-inner {
@@ -13,7 +14,8 @@
 .footer-links {
   display: flex;
   justify-self: start;
-  gap: 1.5rem;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.5rem;
 }
 
 .footer-links a {
@@ -29,6 +31,7 @@
 .footer-copyright {
   text-align: center;
   font-size: 0.875rem;
+  line-height: 1.6;
 }
 
 .footer-copyright span,
@@ -54,6 +57,10 @@
   .footer-links,
   .footer-language {
     justify-self: center;
+  }
+
+  .footer-links {
+    justify-content: center;
   }
 }
 
