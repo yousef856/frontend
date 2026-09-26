@@ -1,0 +1,79 @@
+:host {
+  display: block;
+}
+
+
+/* =========================
+   Application Shell
+========================= */
+
+.app-shell {
+  min-height: 100vh;
+
+  background: #f5f8fc;
+
+  font-family:
+    "Cairo",
+    "Tajawal",
+    Arial,
+    sans-serif;
+}
+
+
+/* =========================
+   Left Content Area
+========================= */
+
+.app-content {
+  min-height: 100vh;
+
+  margin-right: 230px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  transition:
+    margin-right .25s ease;
+}
+
+
+/* Collapsed Sidebar */
+
+.app-shell.sidebar-collapsed
+.app-content {
+  margin-right: 76px;
+}
+
+
+/* =========================
+   Main
+========================= */
+
+.page-content {
+  flex: 1;
+
+  min-width: 0;
+
+  padding: 22px;
+
+  box-sizing: border-box;
+
+  overflow-x: auto;
+}
+
+
+/* =========================
+   Responsive
+========================= */
+
+@media (max-width: 800px) {
+
+  .app-content {
+    margin-right: 0 !important;
+  }
+
+  .page-content {
+    padding: 14px;
+  }
+}

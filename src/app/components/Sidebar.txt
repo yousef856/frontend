@@ -1,0 +1,493 @@
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { RouterLink, RouterLinkActive } from '@angular/router';
+
+interface MenuItem {
+  title: string;
+  icon: string;
+  route?: string;
+  children?: MenuItem[];
+}
+
+@Component({
+  selector: 'app-sidebar',
+  standalone: true,
+  imports: [
+    RouterLink,
+    RouterLinkActive
+  ],
+  templateUrl: './sidebar.component.html',
+  styleUrl: './sidebar.component.css'
+})
+export class SidebarComponent {
+
+  @Input() collapsed = false;
+
+  @Output() collapsedChange =
+    new EventEmitter<boolean>();
+
+  menuItems: MenuItem[] = [
+
+    {
+      title: 'الرئيسية',
+      icon: '⌂',
+      route: '/dashboard'
+    },
+
+    {
+      title: 'المستفيدين',
+      icon: '👥',
+      route: '/beneficiaries'
+    },
+
+    {
+      title: 'المشاريع والبرامج',
+      icon: '▣',
+      route: '/projects'
+    },
+
+    {
+      title: 'التبرعات',
+      icon: '♡',
+      route: '/donations'
+    },
+
+    {
+      title: 'التقارير',
+      icon: '▤',
+      route: '/reports'
+    },
+
+    {
+      title: 'الموارد البشرية',
+      icon: '♙',
+      route: '/human-resources'
+    },
+
+    {
+      title: 'المخزون والمشتريات',
+      icon: '◈',
+      route: '/inventory'
+    },
+
+    {
+      title: 'المالية',
+      icon: '▤',
+      route: '/finance'
+    },
+
+    {
+      title: 'الإعدادات',
+      icon: '⚙',
+      route: '/settings'
+    }
+  ];
+
+
+  toggleSidebar(): void {
+
+    this.collapsed = !this.collapsed;
+
+    this.collapsedChange.emit(this.collapsed);
+  }
+}
+////////
+html 
+///////
+<aside
+  class="sidebar"
+  [class.collapsed]="collapsed"
+  dir="rtl">
+
+
+  <!-- Logo -->
+  <div class="sidebar-header">
+
+    <div class="logo">
+
+      <div class="logo-icon">
+        🌿
+      </div>
+
+      @if (!collapsed) {
+
+        <div class="logo-text">
+
+          <strong>NGO ERP</strong>
+
+          <span>Empower Communities</span>
+
+        </div>
+
+      }
+
+    </div>
+
+  </div>
+
+
+  <!-- Menu -->
+  <nav class="sidebar-menu">
+
+    @for (item of menuItems; track item.title) {
+
+      <a
+        class="menu-item"
+        [routerLink]="item.route"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        [title]="collapsed ? item.title : ''">
+
+        <span class="menu-icon">
+          {{ item.icon }}
+        </span>
+
+        @if (!collapsed) {
+
+          <span class="menu-title">
+            {{ item.title }}
+          </span>
+
+        }
+
+        @if (!collapsed && item.children) {
+
+          <span class="menu-arrow">
+            ‹
+          </span>
+
+        }
+
+      </a>
+
+    }
+
+  </nav>
+
+
+  <!-- Bottom -->
+  @if (!collapsed) {
+
+    <div class="sidebar-message">
+
+      <div class="message-icon">
+        🌱
+      </div>
+
+      <strong>
+        معًا...
+      </strong>
+
+      <span>
+        نصنع فرقًا في حياة
+        المستفيدين
+      </span>
+
+    </div>
+
+  }
+
+
+  <!-- Collapse -->
+  <button
+    class="collapse-button"
+    (click)="toggleSidebar()">
+
+    @if (collapsed) {
+      ‹
+    } @else {
+      ›
+    }
+
+  </button>
+
+</aside>
+/////
+css
+/////
+.sidebar {
+  width: 230px;
+
+  height: 100vh;
+
+  position: fixed;
+
+  top: 0;
+  right: 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      #092541 0%,
+      #0b2948 100%
+    );
+
+  color: white;
+
+  z-index: 1100;
+
+  display: flex;
+
+  flex-direction: column;
+
+  transition:
+    width 0.25s ease;
+
+  box-shadow:
+    -3px 0 15px rgba(0, 0, 0, 0.05);
+}
+
+
+/* =========================
+   Collapsed
+========================= */
+
+.sidebar.collapsed {
+  width: 76px;
+}
+
+
+/* =========================
+   Header
+========================= */
+
+.sidebar-header {
+  height: 68px;
+
+  display: flex;
+
+  align-items: center;
+
+  padding: 0 18px;
+
+  border-bottom:
+    1px solid rgba(255,255,255,0.08);
+}
+
+.logo {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+}
+
+.logo-icon {
+  width: 40px;
+  height: 40px;
+
+  border-radius: 12px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #18bfa6,
+      #2c7fe5
+    );
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  font-size: 22px;
+}
+
+.logo-text {
+  display: flex;
+
+  flex-direction: column;
+}
+
+.logo-text strong {
+  font-size: 19px;
+
+  letter-spacing: .3px;
+}
+
+.logo-text span {
+  font-size: 9px;
+
+  color: #9fb5ca;
+}
+
+
+/* =========================
+   Menu
+========================= */
+
+.sidebar-menu {
+  padding: 15px 8px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 4px;
+}
+
+.menu-item {
+  min-height: 46px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 13px;
+
+  padding: 0 15px;
+
+  border-radius: 8px;
+
+  color: #dbe7f2;
+
+  text-decoration: none;
+
+  transition: .2s;
+
+  white-space: nowrap;
+}
+
+.menu-item:hover {
+  background:
+    rgba(255,255,255,.07);
+}
+
+.menu-item.active {
+  background:
+    linear-gradient(
+      90deg,
+      #0875db,
+      #1265b8
+    );
+
+  color: #fff;
+
+  box-shadow:
+    0 4px 12px
+    rgba(0, 115, 220, .2);
+}
+
+.menu-icon {
+  width: 24px;
+
+  text-align: center;
+
+  font-size: 19px;
+
+  flex-shrink: 0;
+}
+
+.menu-title {
+  font-size: 13px;
+
+  flex: 1;
+}
+
+.menu-arrow {
+  font-size: 18px;
+
+  color: #c4d4e3;
+}
+
+
+/* =========================
+   Collapsed Menu
+========================= */
+
+.sidebar.collapsed .sidebar-header {
+  justify-content: center;
+
+  padding: 0;
+}
+
+.sidebar.collapsed .menu-item {
+  justify-content: center;
+
+  padding: 0;
+}
+
+.sidebar.collapsed .menu-icon {
+  margin: 0;
+}
+
+
+/* =========================
+   Message
+========================= */
+
+.sidebar-message {
+  margin:
+    auto 12px 65px;
+
+  padding: 22px 12px;
+
+  border:
+    1px solid rgba(255,255,255,.08);
+
+  border-radius: 10px;
+
+  text-align: center;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 6px;
+}
+
+.message-icon {
+  font-size: 45px;
+
+  margin-bottom: 8px;
+}
+
+.sidebar-message strong {
+  color: #fff;
+
+  font-size: 15px;
+}
+
+.sidebar-message span {
+  color: #9eb4c9;
+
+  font-size: 11px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================
+   Collapse Button
+========================= */
+
+.collapse-button {
+  position: absolute;
+
+  bottom: 15px;
+
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: 34px;
+  height: 34px;
+
+  border: 1px solid
+    rgba(255,255,255,.12);
+
+  border-radius: 8px;
+
+  background:
+    rgba(255,255,255,.06);
+
+  color: white;
+
+  cursor: pointer;
+
+  font-size: 20px;
+}
+
+.collapse-button:hover {
+  background:
+    rgba(255,255,255,.12);
+}
