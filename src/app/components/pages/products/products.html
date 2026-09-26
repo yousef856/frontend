@@ -1,0 +1,404 @@
+<div class="container-fluid py-3 px-4" dir="rtl">
+  <!-- 1. رأس الصفحة ومسار التنقل -->
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <div>
+      <h3 class="fw-bold text-dark mb-1 d-flex align-items-center gap-2">
+        <i class="bi bi-people-fill text-success"></i> المستفيدين
+      </h3>
+      <p class="text-muted small mb-0">إدارة بيانات المستفيدين ومتابعة حالتهم وخدماتهم</p>
+    </div>
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb mb-0 small text-muted">
+        <li class="breadcrumb-item">
+          <a href="#" class="text-decoration-none text-success">الرئيسية</a>
+        </li>
+        <li class="breadcrumb-item active text-secondary" aria-current="page">المستفيدين</li>
+      </ol>
+    </nav>
+  </div>
+
+  <!-- 2. بطاقات الإحصائيات (KPI Cards) -->
+  <div class="row g-3 mb-4">
+    <!-- البطاقة الأولى: إجمالي المستفيدين -->
+    <div class="col-xl-3 col-md-6">
+      <div class="card border-0 shadow-sm rounded-4 p-3 border-start border-4 border-success">
+        <div class="d-flex justify-content-between align-items-start">
+          <div>
+            <span class="text-muted small fw-medium">إجمالي المستفيدين</span>
+            <h3 class="fw-bold text-dark mt-1 mb-2">12,480</h3>
+            <span class="text-success small fw-semibold"
+              ><i class="bi bi-arrow-up-short"></i> 12% مقارنة بالشهر الماضي</span
+            >
+          </div>
+          <div class="bg-success bg-opacity-10 text-success p-3 rounded-3 fs-4">
+            <i class="bi bi-people"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- البطاقة الثانية: المستفيدون الجدد -->
+    <div class="col-xl-3 col-md-6">
+      <div class="card border-0 shadow-sm rounded-4 p-3 border-start border-4 border-primary">
+        <div class="d-flex justify-content-between align-items-start">
+          <div>
+            <span class="text-muted small fw-medium">المستفيدون الجدد</span>
+            <h3 class="fw-bold text-dark mt-1 mb-2">2,340</h3>
+            <span class="text-success small fw-semibold"
+              ><i class="bi bi-arrow-up-short"></i> 10% مقارنة بالشهر الماضي</span
+            >
+          </div>
+          <div class="bg-primary bg-opacity-10 text-primary p-3 rounded-3 fs-4">
+            <i class="bi bi-person-plus"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- البطاقة الثالثة: المستفيدون النشطون -->
+    <div class="col-xl-3 col-md-6">
+      <div class="card border-0 shadow-sm rounded-4 p-3 border-start border-4 border-info">
+        <div class="d-flex justify-content-between align-items-start">
+          <div>
+            <span class="text-muted small fw-medium">المستفيدون النشطون</span>
+            <h3 class="fw-bold text-dark mt-1 mb-2">10,982</h3>
+            <span class="text-success small fw-semibold"
+              ><i class="bi bi-arrow-up-short"></i> 18% مقارنة بالشهر الماضي</span
+            >
+          </div>
+          <div class="bg-info bg-opacity-10 text-info p-3 rounded-3 fs-4">
+            <i class="bi bi-file-earmark-text"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- البطاقة الرابعة: ملفات المستفيدين -->
+    <div class="col-xl-3 col-md-6">
+      <div class="card border-0 shadow-sm rounded-4 p-3 border-start border-4 border-warning">
+        <div class="d-flex justify-content-between align-items-start">
+          <div>
+            <span class="text-muted small fw-medium">الملفات المستفيدة</span>
+            <h3 class="fw-bold text-dark mt-1 mb-2">12,480</h3>
+            <span class="text-success small fw-semibold"
+              ><i class="bi bi-arrow-up-short"></i> 12% مقارنة بالشهر الماضي</span
+            >
+          </div>
+          <div class="bg-warning bg-opacity-10 text-warning p-3 rounded-3 fs-4">
+            <i class="bi bi-briefcase"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. شريط الأدوات والفلترة والبحث -->
+  <div class="card border-0 shadow-sm rounded-4 p-3 mb-4">
+    <div class="row g-2 align-items-center justify-content-between">
+      <!-- زر إضافة مستفيد جديد + أزرار التنسيق والتصدير -->
+      <div class="col-lg-5 d-flex flex-wrap gap-2 align-items-center">
+        <button
+          class="btn btn-success px-3 py-2 rounded-3 d-flex align-items-center gap-2 shadow-sm"
+        >
+          <i class="bi bi-plus-lg"></i> إضافة مستفيد جديد
+        </button>
+        <div class="btn-group border rounded-3 overflow-hidden bg-light" role="group">
+          <button type="button" class="btn btn-light text-success">
+            <i class="bi bi-grid-3x3-gap"></i>
+          </button>
+          <button type="button" class="btn btn-light text-muted">
+            <i class="bi bi-list-ul"></i>
+          </button>
+        </div>
+        <button
+          class="btn btn-outline-secondary border rounded-3 px-3 py-2 d-flex align-items-center gap-1 text-secondary bg-light"
+        >
+          <i class="bi bi-download"></i> تصدير
+        </button>
+      </div>
+
+      <!-- قوائم التصفية وشريط البحث -->
+      <div class="col-lg-7 d-flex flex-wrap gap-2 justify-content-end align-items-center">
+        <select class="form-select form-select-sm w-auto bg-light border-0 py-2">
+          <option selected>الكل</option>
+          <option>نشط</option>
+          <option>قيد المراجعة</option>
+        </select>
+        <select class="form-select form-select-sm w-auto bg-light border-0 py-2">
+          <option selected>الفئة المستهدفة</option>
+          <option>غذاء</option>
+          <option>تعليم</option>
+          <option>صحة</option>
+          <option>إيواء</option>
+        </select>
+        <select class="form-select form-select-sm w-auto bg-light border-0 py-2">
+          <option selected>المحافظة</option>
+          <option>غزة</option>
+          <option>رفح</option>
+          <option>دير البлах</option>
+        </select>
+        <div
+          class="input-group input-group-sm bg-light rounded-pill border overflow-hidden"
+          style="width: 250px"
+        >
+          <span class="input-group-text bg-transparent border-0 text-success ps-3"
+            ><i class="bi bi-search"></i
+          ></span>
+          <input
+            type="text"
+            class="form-control bg-transparent border-0 shadow-none py-2"
+            placeholder="ابحث بالاسم أو رقم الهوية.."
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. شبكة بطاقات المستفيدين (Beneficiaries Grid) -->
+  <div class="row g-3">
+    <!-- المستفيد 1 -->
+    <div class="col-xl-3 col-md-6">
+      <div class="card border-0 shadow-sm rounded-4 p-3 position-relative bg-white h-100">
+        <div class="d-flex justify-content-between align-items-start mb-3">
+          <span class="badge bg-warning bg-opacity-10 text-warning px-2 py-1 rounded-pill small"
+            >مستفيد غير نشط</span
+          >
+          <div class="dropdown">
+            <button
+              class="btn btn-link text-muted p-0 text-decoration-none"
+              data-bs-toggle="dropdown"
+            >
+              <i class="bi bi-three-dots-vertical"></i>
+            </button>
+            <ul class="dropdown-menu shadow border-0 text-end">
+              <li><a class="dropdown-item" href="#">تعديل البيانات</a></li>
+              <li><a class="dropdown-item text-danger" href="#">حذف المستفيد</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="d-flex align-items-center gap-3 mb-3">
+          <img
+            src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100"
+            class="rounded-circle border border-2 border-warning"
+            width="55"
+            height="55"
+            style="object-fit: cover"
+          />
+          <div>
+            <h6 class="fw-bold mb-1 text-dark">خالد ابراهيم يوسف</h6>
+            <span class="text-muted small">رقم الهوية: 4567891230</span>
+          </div>
+        </div>
+        <div class="bg-light p-2 rounded-3 small mb-3 text-secondary d-flex flex-column gap-1">
+          <div class="d-flex align-items-center gap-2">
+            <i class="bi bi-house-door text-success"></i> إيواء
+          </div>
+          <div class="d-flex align-items-center gap-2">
+            <i class="bi bi-geo-alt text-success"></i> حمص - الزهراء
+          </div>
+        </div>
+        <div
+          class="d-flex justify-content-between align-items-center text-muted small border-top pt-2 mb-3"
+        >
+          <span><i class="bi bi-gender-male text-primary"></i> ذكر</span>
+          <span>السن: 49 سنة</span>
+          <span><i class="bi bi-calendar text-secondary"></i> 1975/07/16</span>
+        </div>
+        <div class="d-flex align-items-center justify-content-between border-top pt-2">
+          <div class="d-flex gap-2 text-muted fs-6">
+            <i class="bi bi-telephone cursor-pointer hover-success"></i>
+            <i class="bi bi-chat-dots cursor-pointer hover-success"></i>
+            <i class="bi bi-eye cursor-pointer hover-success"></i>
+            <i class="bi bi-pencil cursor-pointer hover-success"></i>
+          </div>
+          <button class="btn btn-sm btn-outline-success rounded-pill px-3 py-1 small">
+            عرض التفاصيل
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- المستفيد 2 -->
+    <div class="col-xl-3 col-md-6">
+      <div class="card border-0 shadow-sm rounded-4 p-3 position-relative bg-white h-100">
+        <div class="d-flex justify-content-between align-items-start mb-3">
+          <span class="badge bg-success bg-opacity-10 text-success px-2 py-1 rounded-pill small"
+            >نشط</span
+          >
+          <div class="dropdown">
+            <button
+              class="btn btn-link text-muted p-0 text-decoration-none"
+              data-bs-toggle="dropdown"
+            >
+              <i class="bi bi-three-dots-vertical"></i>
+            </button>
+            <ul class="dropdown-menu shadow border-0 text-end">
+              <li><a class="dropdown-item" href="#">تعديل البيانات</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="d-flex align-items-center gap-3 mb-3">
+          <img
+            src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100"
+            class="rounded-circle border border-2 border-success"
+            width="55"
+            height="55"
+            style="object-fit: cover"
+          />
+          <div>
+            <h6 class="fw-bold mb-1 text-dark">فاطمة محمود حسن</h6>
+            <span class="text-muted small">رقم الهوية: 1234567890</span>
+          </div>
+        </div>
+        <div class="bg-light p-2 rounded-3 small mb-3 text-secondary d-flex flex-column gap-1">
+          <div class="d-flex align-items-center gap-2">
+            <i class="bi bi-basket text-success"></i> غذاء
+          </div>
+          <div class="d-flex align-items-center gap-2">
+            <i class="bi bi-geo-alt text-success"></i> اللاذقية - المزة
+          </div>
+        </div>
+        <div
+          class="d-flex justify-content-between align-items-center text-muted small border-top pt-2 mb-3"
+        >
+          <span><i class="bi bi-gender-female text-danger"></i> أنثى</span>
+          <span>السن: 34 سنة</span>
+          <span><i class="bi bi-calendar text-secondary"></i> 1990/11/03</span>
+        </div>
+        <div class="d-flex align-items-center justify-content-between border-top pt-2">
+          <div class="d-flex gap-2 text-muted fs-6">
+            <i class="bi bi-telephone cursor-pointer hover-success"></i>
+            <i class="bi bi-chat-dots cursor-pointer hover-success"></i>
+            <i class="bi bi-eye cursor-pointer hover-success"></i>
+            <i class="bi bi-pencil cursor-pointer hover-success"></i>
+          </div>
+          <button class="btn btn-sm btn-outline-success rounded-pill px-3 py-1 small">
+            عرض التفاصيل
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- المستفيد 3 -->
+    <div class="col-xl-3 col-md-6">
+      <div class="card border-0 shadow-sm rounded-4 p-3 position-relative bg-white h-100">
+        <div class="d-flex justify-content-between align-items-start mb-3">
+          <span class="badge bg-primary bg-opacity-10 text-primary px-2 py-1 rounded-pill small"
+            >قيد المراجعة</span
+          >
+          <div class="dropdown">
+            <button
+              class="btn btn-link text-muted p-0 text-decoration-none"
+              data-bs-toggle="dropdown"
+            >
+              <i class="bi bi-three-dots-vertical"></i>
+            </button>
+            <ul class="dropdown-menu shadow border-0 text-end">
+              <li><a class="dropdown-item" href="#">تعديل البيانات</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="d-flex align-items-center gap-3 mb-3">
+          <img
+            src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100"
+            class="rounded-circle border border-2 border-primary"
+            width="55"
+            height="55"
+            style="object-fit: cover"
+          />
+          <div>
+            <h6 class="fw-bold mb-1 text-dark">أحمد خالد علي</h6>
+            <span class="text-muted small">رقم الهوية: 9632587410</span>
+          </div>
+        </div>
+        <div class="bg-light p-2 rounded-3 small mb-3 text-secondary d-flex flex-column gap-1">
+          <div class="d-flex align-items-center gap-2">
+            <i class="bi bi-heart-pulse text-success"></i> صحة
+          </div>
+          <div class="d-flex align-items-center gap-2">
+            <i class="bi bi-geo-alt text-success"></i> حلب - جمعية النور
+          </div>
+        </div>
+        <div
+          class="d-flex justify-content-between align-items-center text-muted small border-top pt-2 mb-3"
+        >
+          <span><i class="bi bi-gender-male text-primary"></i> ذكر</span>
+          <span>السن: 19 سنة</span>
+          <span><i class="bi bi-calendar text-secondary"></i> 2005/03/21</span>
+        </div>
+        <div class="d-flex align-items-center justify-content-between border-top pt-2">
+          <div class="d-flex gap-2 text-muted fs-6">
+            <i class="bi bi-telephone cursor-pointer hover-success"></i>
+            <i class="bi bi-chat-dots cursor-pointer hover-success"></i>
+            <i class="bi bi-eye cursor-pointer hover-success"></i>
+            <i class="bi bi-pencil cursor-pointer hover-success"></i>
+          </div>
+          <button class="btn btn-sm btn-outline-success rounded-pill px-3 py-1 small">
+            عرض التفاصيل
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- المستفيد 4 -->
+    <div class="col-xl-3 col-md-6">
+      <div class="card border-0 shadow-sm rounded-4 p-3 position-relative bg-white h-100">
+        <div class="d-flex justify-content-between align-items-start mb-3">
+          <span class="badge bg-success bg-opacity-10 text-success px-2 py-1 rounded-pill small"
+            >نشط</span
+          >
+          <div class="dropdown">
+            <button
+              class="btn btn-link text-muted p-0 text-decoration-none"
+              data-bs-toggle="dropdown"
+            >
+              <i class="bi bi-three-dots-vertical"></i>
+            </button>
+            <ul class="dropdown-menu shadow border-0 text-end">
+              <li><a class="dropdown-item" href="#">تعديل البيانات</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="d-flex align-items-center gap-3 mb-3">
+          <img
+            src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=100"
+            class="rounded-circle border border-2 border-success"
+            width="55"
+            height="55"
+            style="object-fit: cover"
+          />
+          <div>
+            <h6 class="fw-bold mb-1 text-dark">سارة أحمد محمد</h6>
+            <span class="text-muted small">رقم الهوية: 7845632147</span>
+          </div>
+        </div>
+        <div class="bg-light p-2 rounded-3 small mb-3 text-secondary d-flex flex-column gap-1">
+          <div class="d-flex align-items-center gap-2">
+            <i class="bi bi-book text-success"></i> تعليم
+          </div>
+          <div class="d-flex align-items-center gap-2">
+            <i class="bi bi-geo-alt text-success"></i> ريف دمشق - عربين
+          </div>
+        </div>
+        <div
+          class="d-flex justify-content-between align-items-center text-muted small border-top pt-2 mb-3"
+        >
+          <span><i class="bi bi-gender-female text-danger"></i> أنثى</span>
+          <span>السن: 7 سنوات</span>
+          <span><i class="bi bi-calendar text-secondary"></i> 2018/05/12</span>
+        </div>
+        <div class="d-flex align-items-center justify-content-between border-top pt-2">
+          <div class="d-flex gap-2 text-muted fs-6">
+            <i class="bi bi-telephone cursor-pointer hover-success"></i>
+            <i class="bi bi-chat-dots cursor-pointer hover-success"></i>
+            <i class="bi bi-eye cursor-pointer hover-success"></i>
+            <i class="bi bi-pencil cursor-pointer hover-success"></i>
+          </div>
+          <button class="btn btn-sm btn-outline-success rounded-pill px-3 py-1 small">
+            عرض التفاصيل
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

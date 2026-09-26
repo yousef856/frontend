@@ -1,0 +1,386 @@
+<div class="container-fluid py-3 px-4" dir="rtl">
+  <!-- 1. رأس الصفحة ومسار التنقل -->
+  <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-3">
+    <div>
+      <h3 class="fw-bold text-dark mb-1 d-flex align-items-center gap-2">
+        <i class="bi bi-people-fill text-success"></i> إدارة الموارد البشرية
+      </h3>
+      <p class="text-muted small mb-0">
+        إدارة بيانات الموظفين، سجلات الدوام، الإجازات، والرواتب والأجور الشهرية
+      </p>
+    </div>
+    <div class="d-flex gap-2">
+      <button class="btn btn-success px-3 py-2 rounded-3 d-flex align-items-center gap-2 shadow-sm">
+        <i class="bi bi-person-plus-fill"></i> إضافة موظف جديد
+      </button>
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb mb-0 small text-muted align-items-center h-100">
+          <li class="breadcrumb-item">
+            <a href="#" class="text-decoration-none text-success">الرئيسية</a>
+          </li>
+          <li class="breadcrumb-item active text-secondary" aria-current="page">الموارد البشرية</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+
+  <!-- 2. بطاقات إحصائيات الموارد البشرية العلوية -->
+  <div class="row g-3 mb-4">
+    <!-- إجمالي الموظفين -->
+    <div class="col-xl-3 col-md-6">
+      <div
+        class="card border-0 shadow-sm rounded-4 p-3 h-100 bg-white border-start border-4 border-success"
+      >
+        <div class="d-flex justify-content-between align-items-start">
+          <div>
+            <span class="text-muted small fw-medium">إجمالي الموظفين النشطين</span>
+            <h3 class="fw-bold text-dark mt-1 mb-2">48</h3>
+            <span class="text-success small fw-semibold"
+              ><i class="bi bi-arrow-up-short"></i> 4 موظفين جدد
+              <span class="text-muted fw-normal">هذا الشهر</span></span
+            >
+          </div>
+          <div class="bg-success bg-opacity-10 text-success p-3 rounded-3 fs-4">
+            <i class="bi bi-person-badge"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- كادر الدوام اليومي -->
+    <div class="col-xl-3 col-md-6">
+      <div
+        class="card border-0 shadow-sm rounded-4 p-3 h-100 bg-white border-start border-4 border-primary"
+      >
+        <div class="d-flex justify-content-between align-items-start">
+          <div>
+            <span class="text-muted small fw-medium">حاضرون اليوم (الدوام)</span>
+            <h3 class="fw-bold text-dark mt-1 mb-2">45 / 48</h3>
+            <span class="text-primary small fw-semibold"
+              ><i class="bi bi-check-circle"></i> نسبة الحضور 93%</span
+            >
+          </div>
+          <div class="bg-primary bg-opacity-10 text-primary p-3 rounded-3 fs-4">
+            <i class="bi bi-calendar-check"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- طلبات الإجازات المعلقة -->
+    <div class="col-xl-3 col-md-6">
+      <div
+        class="card border-0 shadow-sm rounded-4 p-3 h-100 bg-white border-start border-4 border-warning"
+      >
+        <div class="d-flex justify-content-between align-items-start">
+          <div>
+            <span class="text-muted small fw-medium">طلبات الإجازات المعلقة</span>
+            <h3 class="fw-bold text-dark mt-1 mb-2">5 طلبات</h3>
+            <span class="text-warning small fw-semibold"
+              ><i class="bi bi-clock-history"></i> بانتظار الاعتماد</span
+            >
+          </div>
+          <div class="bg-warning bg-opacity-10 text-warning p-3 rounded-3 fs-4">
+            <i class="bi bi-calendar-minus"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- إجمالي الرواتب الشهرية -->
+    <div class="col-xl-3 col-md-6">
+      <div
+        class="card border-0 shadow-sm rounded-4 p-3 h-100 bg-white border-start border-4 border-info"
+      >
+        <div class="d-flex justify-content-between align-items-start">
+          <div>
+            <span class="text-muted small fw-medium">إجمالي الرواتب الشهرية</span>
+            <h3 class="fw-bold text-dark mt-1 mb-2">$ 42,600</h3>
+            <span class="text-success small fw-semibold"
+              ><i class="bi bi-shield-check"></i> جاهز للصرف</span
+            >
+          </div>
+          <div class="bg-info bg-opacity-10 text-info p-3 rounded-3 fs-4">
+            <i class="bi bi-cash-coin"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. شريط البحث والتصفية -->
+  <div class="card border-0 shadow-sm rounded-4 p-3 mb-4 bg-white">
+    <div class="row g-2 align-items-center justify-content-between">
+      <div class="col-lg-6 d-flex gap-2 flex-wrap">
+        <select class="form-select form-select-sm w-auto bg-light border-0 py-2">
+          <option selected>جميع الأقسام / الإدارات</option>
+          <option>إدارة المشاريع والبرامج</option>
+          <option>المالية والمحاسبة</option>
+          <option>المراقبة والتقييم (MEAL)</option>
+          <option>اللوجستيات والمستودعات</option>
+          <option>الفرق الميدانية</option>
+        </select>
+        <select class="form-select form-select-sm w-auto bg-light border-0 py-2">
+          <option selected>نوع العقد</option>
+          <option>دائم (كامل الوقت)</option>
+          <option>عقد مشروع (مؤقت)</option>
+          <option>استشاري / خبير</option>
+        </select>
+      </div>
+
+      <div class="col-lg-5 d-flex gap-2 justify-content-end">
+        <div
+          class="input-group input-group-sm bg-light rounded-pill border overflow-hidden"
+          style="width: 280px"
+        >
+          <span class="input-group-text bg-transparent border-0 text-success ps-3"
+            ><i class="bi bi-search"></i
+          ></span>
+          <input
+            type="text"
+            class="form-control bg-transparent border-0 shadow-none py-2"
+            placeholder="ابحث باسم الموظف، المسمى الوظيفي.."
+          />
+        </div>
+        <button
+          class="btn btn-sm btn-light border px-3 rounded-3 text-secondary d-flex align-items-center gap-1"
+        >
+          <i class="bi bi-file-earmark-excel text-success"></i> تصدير
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. جدول بيانات الموظفين -->
+  <div class="card border-0 shadow-sm rounded-4 bg-white overflow-hidden">
+    <div
+      class="card-header bg-white border-0 py-3 px-4 d-flex justify-content-between align-items-center"
+    >
+      <h6 class="fw-bold text-dark m-0">قائمة الكادر الوظيفي</h6>
+      <span class="text-muted small">عرض الموظفين النشطين حالياً</span>
+    </div>
+
+    <div class="table-responsive">
+      <table class="table align-middle mb-0 text-nowrap">
+        <thead class="table-light text-muted small">
+          <tr>
+            <th class="py-3 px-4">الموظف / الكود</th>
+            <th class="py-3">المسمى الوظيفي</th>
+            <th class="py-3">القسم / الإدارة</th>
+            <th class="py-3">نوع العقد</th>
+            <th class="py-3">الراتب الأساسي</th>
+            <th class="py-3">الحالة</th>
+            <th class="py-3 text-end px-4">الإجراءات</th>
+          </tr>
+        </thead>
+        <tbody class="small">
+          <!-- موظف 1 -->
+          <tr>
+            <td class="px-4">
+              <div class="d-flex align-items-center gap-2">
+                <div
+                  class="bg-success bg-opacity-10 text-success rounded-circle d-flex align-items-center justify-content-center fw-bold"
+                  style="width: 35px; height: 35px; font-size: 0.8rem"
+                >
+                  ي أ
+                </div>
+                <div>
+                  <span class="fw-semibold text-dark d-block">م. يوسف أبو لولي</span>
+                  <span class="text-muted" style="font-size: 0.75rem">EMP-2026-012</span>
+                </div>
+              </div>
+            </td>
+            <td class="text-secondary fw-medium">مسؤول تكنولوجيا وأنظمة / بيانات</td>
+            <td>تكنولوجيا المعلومات وإدارة البيانات</td>
+            <td><span class="badge bg-light text-dark border">دائم (كامل الوقت)</span></td>
+            <td class="fw-bold text-dark">$ 1,200</td>
+            <td>
+              <span class="badge bg-success bg-opacity-10 text-success px-2 py-1 rounded-pill"
+                >على رأس عمله</span
+              >
+            </td>
+            <td class="text-end px-4">
+              <button
+                class="btn btn-sm btn-light text-secondary border-0 rounded-2 me-1"
+                title="الملف الشخصي"
+              >
+                <i class="bi bi-eye"></i>
+              </button>
+              <button
+                class="btn btn-sm btn-light text-primary border-0 rounded-2 me-1"
+                title="تعديل"
+              >
+                <i class="bi bi-pencil"></i>
+              </button>
+              <button
+                class="btn btn-sm btn-light text-danger border-0 rounded-2"
+                title="إيقاف مؤقت"
+              >
+                <i class="bi bi-pause-circle"></i>
+              </button>
+            </td>
+          </tr>
+
+          <!-- موظف 2 -->
+          <tr>
+            <td class="px-4">
+              <div class="d-flex align-items-center gap-2">
+                <div
+                  class="bg-primary bg-opacity-10 text-primary rounded-circle d-flex align-items-center justify-content-center fw-bold"
+                  style="width: 35px; height: 35px; font-size: 0.8rem"
+                >
+                  أ م
+                </div>
+                <div>
+                  <span class="fw-semibold text-dark d-block">أحمد محمد الشريف</span>
+                  <span class="text-muted" style="font-size: 0.75rem">EMP-2026-018</span>
+                </div>
+              </div>
+            </td>
+            <td class="text-secondary fw-medium">مدير مشاريع إغاثية</td>
+            <td>إدارة المشاريع والبرامج</td>
+            <td><span class="badge bg-light text-dark border">دائم (كامل الوقت)</span></td>
+            <td class="fw-bold text-dark">$ 1,450</td>
+            <td>
+              <span class="badge bg-success bg-opacity-10 text-success px-2 py-1 rounded-pill"
+                >على رأس عمله</span
+              >
+            </td>
+            <td class="text-end px-4">
+              <button
+                class="btn btn-sm btn-light text-secondary border-0 rounded-2 me-1"
+                title="الملف الشخصي"
+              >
+                <i class="bi bi-eye"></i>
+              </button>
+              <button
+                class="btn btn-sm btn-light text-primary border-0 rounded-2 me-1"
+                title="تعديل"
+              >
+                <i class="bi bi-pencil"></i>
+              </button>
+              <button
+                class="btn btn-sm btn-light text-danger border-0 rounded-2"
+                title="إيقاف مؤقت"
+              >
+                <i class="bi bi-pause-circle"></i>
+              </button>
+            </td>
+          </tr>
+
+          <!-- موظف 3 -->
+          <tr>
+            <td class="px-4">
+              <div class="d-flex align-items-center gap-2">
+                <div
+                  class="bg-warning bg-opacity-10 text-warning rounded-circle d-flex align-items-center justify-content-center fw-bold"
+                  style="width: 35px; height: 35px; font-size: 0.8rem"
+                >
+                  س ر
+                </div>
+                <div>
+                  <span class="fw-semibold text-dark d-block">سارة رائد البريم</span>
+                  <span class="text-muted" style="font-size: 0.75rem">EMP-2026-025</span>
+                </div>
+              </div>
+            </td>
+            <td class="text-secondary fw-medium">مسؤول مراقبة وتقييم (MEAL)</td>
+            <td>المراقبة والتقييم والجودة</td>
+            <td><span class="badge bg-light text-dark border">عقد مشروع (مؤقت)</span></td>
+            <td class="fw-bold text-dark">$ 1,100</td>
+            <td>
+              <span class="badge bg-warning bg-opacity-10 text-warning px-2 py-1 rounded-pill"
+                >إجازة سنوية</span
+              >
+            </td>
+            <td class="text-end px-4">
+              <button
+                class="btn btn-sm btn-light text-secondary border-0 rounded-2 me-1"
+                title="الملف الشخصي"
+              >
+                <i class="bi bi-eye"></i>
+              </button>
+              <button
+                class="btn btn-sm btn-light text-primary border-0 rounded-2 me-1"
+                title="تعديل"
+              >
+                <i class="bi bi-pencil"></i>
+              </button>
+              <button
+                class="btn btn-sm btn-light text-danger border-0 rounded-2"
+                title="إيقاف مؤقت"
+              >
+                <i class="bi bi-pause-circle"></i>
+              </button>
+            </td>
+          </tr>
+
+          <!-- موظف 4 -->
+          <tr>
+            <td class="px-4">
+              <div class="d-flex align-items-center gap-2">
+                <div
+                  class="bg-info bg-opacity-10 text-info rounded-circle d-flex align-items-center justify-content-center fw-bold"
+                  style="width: 35px; height: 35px; font-size: 0.8rem"
+                >
+                  م خ
+                </div>
+                <div>
+                  <span class="fw-semibold text-dark d-block">محمود خالد النجار</span>
+                  <span class="text-muted" style="font-size: 0.75rem">EMP-2026-031</span>
+                </div>
+              </div>
+            </td>
+            <td class="text-secondary fw-medium">محاسب أول الموازنات</td>
+            <td>المالية والمحاسبة</td>
+            <td><span class="badge bg-light text-dark border">دائم (كامل الوقت)</span></td>
+            <td class="fw-bold text-dark">$ 1,250</td>
+            <td>
+              <span class="badge bg-success bg-opacity-10 text-success px-2 py-1 rounded-pill"
+                >على رأس عمله</span
+              >
+            </td>
+            <td class="text-end px-4">
+              <button
+                class="btn btn-sm btn-light text-secondary border-0 rounded-2 me-1"
+                title="الملف الشخصي"
+              >
+                <i class="bi bi-eye"></i>
+              </button>
+              <button
+                class="btn btn-sm btn-light text-primary border-0 rounded-2 me-1"
+                title="تعديل"
+              >
+                <i class="bi bi-pencil"></i>
+              </button>
+              <button
+                class="btn btn-sm btn-light text-danger border-0 rounded-2"
+                title="إيقاف مؤقت"
+              >
+                <i class="bi bi-pause-circle"></i>
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- تذييل الجدول والتنقل بين الصفحات -->
+    <div
+      class="card-footer bg-white border-0 py-3 px-4 d-flex justify-content-between align-items-center flex-wrap gap-2"
+    >
+      <span class="text-muted small">عرض 1 إلى 4 من أصل 48 موظفاً</span>
+      <nav aria-label="Page navigation">
+        <ul class="pagination pagination-sm mb-0">
+          <li class="page-item disabled"><a class="page-link" href="#">السابق</a></li>
+          <li class="page-item active">
+            <a class="page-link bg-success border-success" href="#">1</a>
+          </li>
+          <li class="page-item"><a class="page-link text-success" href="#">2</a></li>
+          <li class="page-item"><a class="page-link text-success" href="#">3</a></li>
+          <li class="page-item"><a class="page-link text-success" href="#">التالي</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>

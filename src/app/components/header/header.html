@@ -1,36 +1,134 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-        </li>
-      </ul>
-      <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
+<header class="navbar navbar-expand bg-white border-bottom px-3 px-lg-4 py-2 site-header" dir="rtl">
+  <div class="container-fluid p-0 header-inner">
+    <div class="header-menu">
+      <button
+        class="btn header-menu-button"
+        type="button"
+        aria-label="طي القائمة الجانبية"
+        (click)="toggleSidebar()"
+      >
+        <i class="bi bi-list"></i>
+      </button>
+    </div>
+
+    <div class="header-search">
+      <div class="flex-grow-1 px-4 d-none d-md-block" style="max-width: 450px">
+        <div class="input-group input-group-sm bg-light rounded-pill border overflow-hidden">
+          <span class="input-group-text bg-transparent border-0 text-success ps-3">
+            <i class="bi bi-search"></i>
+          </span>
+          <input
+            type="text"
+            class="form-control bg-transparent border-0 shadow-none py-2"
+            placeholder="ابحث عن مستفيد، رقم الهوية، رقم الملف ..."
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="header-actions">
+      <!-- 1. أيقونة المحادثات مع قائمة منسدلة -->
+      <div class="dropdown">
+        <button
+          class="btn btn-light rounded-circle p-2 text-success dropdown-toggle no-arrow"
+          type="button"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          <i class="bi bi-chat-dots fs-6"></i>
+        </button>
+        <ul class="dropdown-menu shadow border-0 text-end p-2" style="font-size: 0.85rem">
+          <li><h6 class="dropdown-header text-success fw-bold">المحادثات</h6></li>
+          <li><hr class="dropdown-divider my-1" /></li>
+          <li><a class="dropdown-item rounded" href="#">لا توجد رسائل جديدة</a></li>
+        </ul>
+      </div>
+
+      <!-- 2. أيقونة التقويم مع قائمة منسدلة -->
+      <div class="dropdown">
+        <button
+          class="btn btn-light rounded-circle p-2 text-success dropdown-toggle no-arrow"
+          type="button"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          <i class="bi bi-calendar-event fs-6"></i>
+        </button>
+        <ul class="dropdown-menu shadow border-0 text-end p-2" style="font-size: 0.85rem">
+          <li><h6 class="dropdown-header text-success fw-bold">التقويم والمواعيد</h6></li>
+          <li><hr class="dropdown-divider my-1" /></li>
+          <li><a class="dropdown-item rounded" href="#">عرض جدول اليوم</a></li>
+          <li><a class="dropdown-item rounded" href="#">إضافة موعد جديد</a></li>
+        </ul>
+      </div>
+
+      <!-- 3. أيقونة الإشعارات مع قائمة منسدلة -->
+      <div class="dropdown">
+        <button
+          class="btn btn-light rounded-circle position-relative p-2 text-success dropdown-toggle no-arrow"
+          type="button"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          <i class="bi bi-bell fs-6"></i>
+          <span
+            class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+            style="font-size: 0.6rem"
+          >
+            5
+          </span>
+        </button>
+        <ul
+          class="dropdown-menu shadow border-0 text-end p-2"
+          style="font-size: 0.85rem; min-width: 200px"
+        >
+          <li><h6 class="dropdown-header text-success fw-bold">الإشعارات (5)</h6></li>
+          <li><hr class="dropdown-divider my-1" /></li>
+          <li><a class="dropdown-item rounded" href="#">تم إضافة مستفيد جديد</a></li>
+          <li><a class="dropdown-item rounded" href="#">تحديث بيانات الموازنة</a></li>
+        </ul>
+      </div>
+
+      <!-- 4. ملف المستخدم (منقول لأقصى اليسار) مع قائمة منسدلة شاملة -->
+      <div class="dropdown border-start ps-3 ms-2 header-profile">
+        <a
+          href="#"
+          class="d-flex align-items-center gap-2 text-decoration-none dropdown-toggle text-dark no-arrow"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          <div class="text-end header-profile-info">
+            <h6 class="mb-0 fw-bold text-dark" style="font-size: 0.9rem">أحمد محمد</h6>
+            <small class="text-muted" style="font-size: 0.75rem">مدير النظام</small>
+          </div>
+          <img
+            src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100"
+            alt="User Profile"
+            class="rounded-circle border border-success"
+            width="40"
+            height="40"
+            style="object-fit: cover"
+          />
+        </a>
+        <ul class="dropdown-menu shadow border-0 text-end mt-2 p-2" style="font-size: 0.85rem">
+          <li>
+            <a class="dropdown-item rounded" href="#"
+              ><i class="bi bi-person ms-2"></i> الملف الشخصي</a
+            >
+          </li>
+          <li>
+            <a class="dropdown-item rounded" href="#"
+              ><i class="bi bi-gear ms-2"></i> إعدادات الحساب</a
+            >
+          </li>
+          <li><hr class="dropdown-divider my-1" /></li>
+          <li>
+            <a class="dropdown-item rounded text-danger" href="#"
+              ><i class="bi bi-box-arrow-right ms-2"></i> تسجيل الخروج</a
+            >
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
-</nav>
+</header>

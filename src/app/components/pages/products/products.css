@@ -1,0 +1,26 @@
+.card {
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.08) !important;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.hover-success:hover {
+  color: #2e8b57 !important;
+}
+
+/* تنسيق حقول الاختيار والبحث لتتوافق مع تصميم الـ ERP النظيف */
+.form-select, .form-control {
+  font-size: 0.85rem;
+}
+
+.form-select:focus, .form-control:focus {
+  border-color: #2e8b57;
+  box-shadow: 0 0 0 0.15rem rgba(46, 139, 87, 0.15);
+}

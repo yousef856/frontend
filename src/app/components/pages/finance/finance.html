@@ -1,0 +1,333 @@
+<div class="container-fluid py-3 px-4" dir="rtl">
+  <!-- 1. رأس الصفحة ومسار التنقل -->
+  <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-3">
+    <div>
+      <h3 class="fw-bold text-dark mb-1 d-flex align-items-center gap-2">
+        <i class="bi bi-cash-coin text-success"></i> الإدارة المالية والمحاسبة
+      </h3>
+      <p class="text-muted small mb-0">
+        إدارة الحسابات، قيود اليومية، سندات الصرف والقبض، ومتابعة الموازنات المالية
+      </p>
+    </div>
+    <div class="d-flex gap-2">
+      <button class="btn btn-success px-3 py-2 rounded-3 d-flex align-items-center gap-2 shadow-sm">
+        <i class="bi bi-plus-lg"></i> قيد / سند جديد
+      </button>
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb mb-0 small text-muted align-items-center h-100">
+          <li class="breadcrumb-item">
+            <a href="#" class="text-decoration-none text-success">الرئيسية</a>
+          </li>
+          <li class="breadcrumb-item active text-secondary" aria-current="page">المالية</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+
+  <!-- 2. بطاقات إحصائيات المالية العلوية -->
+  <div class="row g-3 mb-4">
+    <!-- إجمالي السيولة النقدية -->
+    <div class="col-xl-3 col-md-6">
+      <div
+        class="card border-0 shadow-sm rounded-4 p-3 h-100 bg-white border-start border-4 border-success"
+      >
+        <div class="d-flex justify-content-between align-items-start">
+          <div>
+            <span class="text-muted small fw-medium">إجمالي السيولة (بنود وصناديق)</span>
+            <h3 class="fw-bold text-dark mt-1 mb-2">$ 312,400</h3>
+            <span class="text-success small fw-semibold"
+              ><i class="bi bi-arrow-up-short"></i> 12%
+              <span class="text-muted fw-normal">مقارنة بالشهر السابق</span></span
+            >
+          </div>
+          <div class="bg-success bg-opacity-10 text-success p-3 rounded-3 fs-4">
+            <i class="bi bi-wallet2"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- المصروفات الجارية -->
+    <div class="col-xl-3 col-md-6">
+      <div
+        class="card border-0 shadow-sm rounded-4 p-3 h-100 bg-white border-start border-4 border-primary"
+      >
+        <div class="d-flex justify-content-between align-items-start">
+          <div>
+            <span class="text-muted small fw-medium">مصروفات الشهر الحالي</span>
+            <h3 class="fw-bold text-dark mt-1 mb-2">$ 48,200</h3>
+            <span class="text-primary small fw-semibold"
+              ><i class="bi bi-graph-down"></i> ضمن الموازنة المعتمدة</span
+            >
+          </div>
+          <div class="bg-primary bg-opacity-10 text-primary p-3 rounded-3 fs-4">
+            <i class="bi bi-receipt"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- الإيرادات الواردة -->
+    <div class="col-xl-3 col-md-6">
+      <div
+        class="card border-0 shadow-sm rounded-4 p-3 h-100 bg-white border-start border-4 border-info"
+      >
+        <div class="d-flex justify-content-between align-items-start">
+          <div>
+            <span class="text-muted small fw-medium">إجمالي الإيرادات (التبرعات)</span>
+            <h3 class="fw-bold text-dark mt-1 mb-2">$ 95,000</h3>
+            <span class="text-info small fw-semibold"
+              ><i class="bi bi-arrow-down-left"></i> هذا الربع</span
+            >
+          </div>
+          <div class="bg-info bg-opacity-10 text-info p-3 rounded-3 fs-4">
+            <i class="bi bi-cash-stack"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- الفواتير أو السندات المعلقة -->
+    <div class="col-xl-3 col-md-6">
+      <div
+        class="card border-0 shadow-sm rounded-4 p-3 h-100 bg-white border-start border-4 border-warning"
+      >
+        <div class="d-flex justify-content-between align-items-start">
+          <div>
+            <span class="text-muted small fw-medium">سندات بانتظار الاعتماد</span>
+            <h3 class="fw-bold text-dark mt-1 mb-2">6 سندات</h3>
+            <span class="text-warning small fw-semibold"
+              ><i class="bi bi-clock-history"></i> مراجعة المدير المالي</span
+            >
+          </div>
+          <div class="bg-warning bg-opacity-10 text-warning p-3 rounded-3 fs-4">
+            <i class="bi bi-file-earmark-check"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. شريط البحث والتصفية -->
+  <div class="card border-0 shadow-sm rounded-4 p-3 mb-4 bg-white">
+    <div class="row g-2 align-items-center justify-content-between">
+      <div class="col-lg-6 d-flex gap-2 flex-wrap">
+        <select class="form-select form-select-sm w-auto bg-light border-0 py-2">
+          <option selected>نوع الحركة المالية (الكل)</option>
+          <option>سند قبض (إيراد)</option>
+          <option>سند صرف (مصروف)</option>
+          <option>قيد تسوية محاسبية</option>
+        </select>
+        <select class="form-select form-select-sm w-auto bg-light border-0 py-2">
+          <option selected>جميع الحسابات / البنوك</option>
+          <option>البنك العربي - حساب رئيسي ($)</option>
+          <option>بنك فلسطين - طوارئ ($)</option>
+          <option>الصندوق النقدي (الخزينة)</option>
+        </select>
+      </div>
+
+      <div class="col-lg-5 d-flex gap-2 justify-content-end">
+        <div
+          class="input-group input-group-sm bg-light rounded-pill border overflow-hidden"
+          style="width: 280px"
+        >
+          <span class="input-group-text bg-transparent border-0 text-success ps-3"
+            ><i class="bi bi-search"></i
+          ></span>
+          <input
+            type="text"
+            class="form-control bg-transparent border-0 shadow-none py-2"
+            placeholder="ابحث برقم السند، البيان.."
+          />
+        </div>
+        <button
+          class="btn btn-sm btn-light border px-3 rounded-3 text-secondary d-flex align-items-center gap-1"
+        >
+          <i class="bi bi-file-earmark-excel text-success"></i> تصدير
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. جدول الحركات المالية والقيود -->
+  <div class="card border-0 shadow-sm rounded-4 bg-white overflow-hidden">
+    <div
+      class="card-header bg-white border-0 py-3 px-4 d-flex justify-content-between align-items-center"
+    >
+      <h6 class="fw-bold text-dark m-0">سجل القيود والسندات المالية الأخيرة</h6>
+      <span class="text-muted small">محدث آلياً وفق الحركات اليومية</span>
+    </div>
+
+    <div class="table-responsive">
+      <table class="table align-middle mb-0 text-nowrap">
+        <thead class="table-light text-muted small">
+          <tr>
+            <th class="py-3 px-4">رقم السند / القيد</th>
+            <th class="py-3">نوع الحركة</th>
+            <th class="py-3">البيان / الوصف المالي</th>
+            <th class="py-3">الحساب / البنك</th>
+            <th class="py-3">المبلغ</th>
+            <th class="py-3">التاريخ</th>
+            <th class="py-3">الحالة</th>
+            <th class="py-3 text-end px-4">الإجراءات</th>
+          </tr>
+        </thead>
+        <tbody class="small">
+          <!-- حركة 1 -->
+          <tr>
+            <td class="px-4 fw-bold text-success">#RV-2026-301</td>
+            <td>
+              <span
+                class="badge bg-success bg-opacity-10 text-success border border-success border-opacity-25"
+                >سند قبض</span
+              >
+            </td>
+            <td class="text-dark fw-medium">دفعة تمويل مشروع تعليم للجميع - مؤسسة الأمل</td>
+            <td>البنك العربي ($)</td>
+            <td class="fw-bold text-success">+ $ 25,000</td>
+            <td class="text-muted">24/09/2026</td>
+            <td>
+              <span class="badge bg-success bg-opacity-10 text-success px-2 py-1 rounded-pill"
+                >معتمد ومرحل</span
+              >
+            </td>
+            <td class="text-end px-4">
+              <button
+                class="btn btn-sm btn-light text-secondary border-0 rounded-2 me-1"
+                title="عرض السند"
+              >
+                <i class="bi bi-file-earmark-text"></i>
+              </button>
+              <button
+                class="btn btn-sm btn-light text-primary border-0 rounded-2 me-1"
+                title="طباعة"
+              >
+                <i class="bi bi-printer"></i>
+              </button>
+            </td>
+          </tr>
+
+          <!-- حركة 2 -->
+          <tr>
+            <td class="px-4 fw-bold text-danger">#PV-2026-412</td>
+            <td>
+              <span
+                class="badge bg-danger bg-opacity-10 text-danger border border-danger border-opacity-25"
+                >سند صرف</span
+              >
+            </td>
+            <td class="text-dark fw-medium">صرف مستحقات توريد أدوية ومستلزمات طبية طارئة</td>
+            <td>بنك فلسطين ($)</td>
+            <td class="fw-bold text-danger">- $ 12,400</td>
+            <td class="text-muted">22/09/2026</td>
+            <td>
+              <span class="badge bg-success bg-opacity-10 text-success px-2 py-1 rounded-pill"
+                >معتمد ومرحل</span
+              >
+            </td>
+            <td class="text-end px-4">
+              <button
+                class="btn btn-sm btn-light text-secondary border-0 rounded-2 me-1"
+                title="عرض السند"
+              >
+                <i class="bi bi-file-earmark-text"></i>
+              </button>
+              <button
+                class="btn btn-sm btn-light text-primary border-0 rounded-2 me-1"
+                title="طباعة"
+              >
+                <i class="bi bi-printer"></i>
+              </button>
+            </td>
+          </tr>
+
+          <!-- حركة 3 -->
+          <tr>
+            <td class="px-4 fw-bold text-danger">#PV-2026-411</td>
+            <td>
+              <span
+                class="badge bg-danger bg-opacity-10 text-danger border border-danger border-opacity-25"
+                >سند صرف</span
+              >
+            </td>
+            <td class="text-dark fw-medium">نثريات تشغيلية ومصاريف إدارية للمكتب الميداني</td>
+            <td>الصندوق النقدي (الخزينة)</td>
+            <td class="fw-bold text-danger">- $ 850</td>
+            <td class="text-muted">20/09/2026</td>
+            <td>
+              <span class="badge bg-warning bg-opacity-10 text-warning px-2 py-1 rounded-pill"
+                >بانتظار الاعتماد</span
+              >
+            </td>
+            <td class="text-end px-4">
+              <button
+                class="btn btn-sm btn-light text-secondary border-0 rounded-2 me-1"
+                title="عرض السند"
+              >
+                <i class="bi bi-file-earmark-text"></i>
+              </button>
+              <button
+                class="btn btn-sm btn-light text-primary border-0 rounded-2 me-1"
+                title="طباعة"
+              >
+                <i class="bi bi-printer"></i>
+              </button>
+            </td>
+          </tr>
+
+          <!-- حركة 4 -->
+          <tr>
+            <td class="px-4 fw-bold text-success">#RV-2026-300</td>
+            <td>
+              <span
+                class="badge bg-success bg-opacity-10 text-success border border-success border-opacity-25"
+                >سند قبض</span
+              >
+            </td>
+            <td class="text-dark fw-medium">تبرع نقدي عام لصالح حملة طرود الشتاء</td>
+            <td>الصندوق النقدي (الخزينة)</td>
+            <td class="fw-bold text-success">+ $ 3,200</td>
+            <td class="text-muted">18/09/2026</td>
+            <td>
+              <span class="badge bg-success bg-opacity-10 text-success px-2 py-1 rounded-pill"
+                >معتمد ومرحل</span
+              >
+            </td>
+            <td class="text-end px-4">
+              <button
+                class="btn btn-sm btn-light text-secondary border-0 rounded-2 me-1"
+                title="عرض السند"
+              >
+                <i class="bi bi-file-earmark-text"></i>
+              </button>
+              <button
+                class="btn btn-sm btn-light text-primary border-0 rounded-2 me-1"
+                title="طباعة"
+              >
+                <i class="bi bi-printer"></i>
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- تذييل الجدول والتنقل بين الصفحات -->
+    <div
+      class="card-footer bg-white border-0 py-3 px-4 d-flex justify-content-between align-items-center flex-wrap gap-2"
+    >
+      <span class="text-muted small">عرض 1 إلى 4 من أصل 188 حركة مالية مسجلة</span>
+      <nav aria-label="Page navigation">
+        <ul class="pagination pagination-sm mb-0">
+          <li class="page-item disabled"><a class="page-link" href="#">السابق</a></li>
+          <li class="page-item active">
+            <a class="page-link bg-success border-success" href="#">1</a>
+          </li>
+          <li class="page-item"><a class="page-link text-success" href="#">2</a></li>
+          <li class="page-item"><a class="page-link text-success" href="#">3</a></li>
+          <li class="page-item"><a class="page-link text-success" href="#">التالي</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>

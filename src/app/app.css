@@ -1,0 +1,51 @@
+/* تخصيص لون الشريط الجانبي الداكن المستوحى من التصميم */
+.sidebar-custom {
+  background-color: #0b1329;
+  min-height: 100vh;
+}
+
+/* تنسيق الروابط في القائمة الجانبية عند التمرير */
+.sidebar-custom .nav-link {
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.sidebar-custom .nav-link:hover:not(.active) {
+  background-color: rgba(255, 255, 255, 0.08);
+  color: #28a745 !important;
+}
+
+/* تحسين مظهر النصوص الباهتة */
+.text-white-50 {
+  color: #a0aec0 !important;
+}
+
+/* تخصيص مظهر القائمة الجانبية */
+.sidebar-column {
+  flex: 0 0 260px;
+  width: 260px;
+  min-width: 0;
+  transition: flex-basis 0.3s ease, width 0.3s ease;
+}
+
+.sidebar-column.sidebar-collapsed {
+  flex-basis: 76px;
+  width: 76px;
+}
+
+.sidebar-column app-sidebar {
+  display: block;
+  height: 100%;
+}
+
+.main-column {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+/* تخصيص مظهر الصفوف */
+.row.g-0 {
+  display: flex;
+  flex-wrap: nowrap;
+  min-height: 100vh;
+}

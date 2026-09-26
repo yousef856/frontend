@@ -1,0 +1,130 @@
+.sidebar-container {
+  background-color: #e8f5e9;
+  color: #1b4332 !important;
+  min-height: 100vh;
+  transition: all 0.3s ease-in-out;
+}
+
+.text-leaf {
+  color: #2e8b57;
+}
+
+.text-leaf-light {
+  color: #8fbc8f;
+}
+
+.sidebar-container .nav-link {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  border-radius: 8px;
+  transition: all 0.25s ease-in-out;
+  color: #1b4332 !important;
+  font-size: 0.95rem;
+}
+
+.sidebar-container .nav-link i {
+  width: 1.5rem;
+  flex: 0 0 1.5rem;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.sidebar-container .nav-link .sidebar-label {
+  flex: 1;
+  text-align: right;
+}
+
+.sidebar-container .nav-link:hover {
+  background-color: #c8e6c9;
+  color: #1b4332 !important;
+}
+
+.sidebar-container .nav-link.active-leaf {
+  background-color: #a5d6a7;
+  color: #1b4332 !important;
+  border-right: 4px solid #52b788;
+}
+
+.sidebar-collapsed {
+  padding-inline: 0.5rem !important;
+}
+
+.sidebar-collapsed .sidebar-label {
+  display: none;
+}
+
+.sidebar-collapsed .nav-link {
+  width: 44px;
+  height: 44px;
+  margin-inline: auto;
+  padding: 0 !important;
+  border-radius: 12px;
+  color: #14532d !important;
+  background-color: #f4fbf5;
+  justify-content: center;
+  gap: 0;
+  padding-inline: 0.5rem !important;
+}
+
+.sidebar-collapsed .nav-link i {
+  width: auto;
+  flex: 0 0 auto;
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
+.sidebar-collapsed .nav-link:hover {
+  background-color: #c8e6c9;
+}
+
+.sidebar-collapsed .nav-link.active-leaf {
+  background-color: #a5d6a7;
+  border-right: 0;
+  box-shadow: inset 0 0 0 2px #52b788;
+}
+
+.sidebar-collapsed .border-bottom .bi-tree-fill {
+  color: #14532d !important;
+  font-size: 1.8rem !important;
+}
+
+.sidebar-container.sidebar-collapsed {
+  padding: 0.75rem 0.5rem !important;
+}
+
+.sidebar-container.sidebar-collapsed .nav-link {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto;
+  padding: 0 !important;
+  justify-content: center;
+  border-radius: 12px;
+  color: #14532d !important;
+  background-color: #f4fbf5;
+}
+
+.sidebar-container.sidebar-collapsed .nav-link i {
+  display: inline-block;
+  width: auto;
+  flex: none;
+  color: #14532d !important;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.sidebar-container.sidebar-collapsed .nav-link:hover,
+.sidebar-container.sidebar-collapsed .nav-link.active-leaf {
+  background-color: #c8e6c9;
+  box-shadow: inset 0 0 0 2px #52b788;
+}
+
+.leaf-logo-icon {
+  font-size: 1.5rem;
+}
+
+.sidebar-container ul.nav {
+  padding-inline-start: 0;
+  margin-block: 0;
+  list-style: none;
+}

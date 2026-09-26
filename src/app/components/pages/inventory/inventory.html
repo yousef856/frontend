@@ -1,0 +1,387 @@
+<div class="container-fluid py-3 px-4" dir="rtl">
+  <!-- 1. رأس الصفحة ومسار التنقل -->
+  <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-3">
+    <div>
+      <h3 class="fw-bold text-dark mb-1 d-flex align-items-center gap-2">
+        <i class="bi bi-boxes text-success"></i> المخزون والمشتريات
+      </h3>
+      <p class="text-muted small mb-0">
+        إدارة المستودعات، مراقبة مستويات الأصناف، ومتابعة طلبات الشراء الواردة والصادرة
+      </p>
+    </div>
+    <div class="d-flex gap-2">
+      <button class="btn btn-success px-3 py-2 rounded-3 d-flex align-items-center gap-2 shadow-sm">
+        <i class="bi bi-plus-lg"></i> إضافة صنف / طلب شراء
+      </button>
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb mb-0 small text-muted align-items-center h-100">
+          <li class="breadcrumb-item">
+            <a href="#" class="text-decoration-none text-success">الرئيسية</a>
+          </li>
+          <li class="breadcrumb-item active text-secondary" aria-current="page">
+            المخزون والمشتريات
+          </li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+
+  <!-- 2. بطاقات إحصائيات المخزون العلوية -->
+  <div class="row g-3 mb-4">
+    <!-- إجمالي الأصناف -->
+    <div class="col-xl-3 col-md-6">
+      <div
+        class="card border-0 shadow-sm rounded-4 p-3 h-100 bg-white border-start border-4 border-success"
+      >
+        <div class="d-flex justify-content-between align-items-start">
+          <div>
+            <span class="text-muted small fw-medium">إجمالي الأصناف بالمخزن</span>
+            <h3 class="fw-bold text-dark mt-1 mb-2">1,240 صنف</h3>
+            <span class="text-success small fw-semibold"
+              ><i class="bi bi-arrow-up-short"></i> 8%
+              <span class="text-muted fw-normal">مقارنة بالشهر السابق</span></span
+            >
+          </div>
+          <div class="bg-success bg-opacity-10 text-success p-3 rounded-3 fs-4">
+            <i class="bi bi-box-seam"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- تنبيهات انخفاض المخزون -->
+    <div class="col-xl-3 col-md-6">
+      <div
+        class="card border-0 shadow-sm rounded-4 p-3 h-100 bg-white border-start border-4 border-danger"
+      >
+        <div class="d-flex justify-content-between align-items-start">
+          <div>
+            <span class="text-muted small fw-medium">تنبيهات قرب نفاذ المخزون</span>
+            <h3 class="fw-bold text-dark mt-1 mb-2">4 أصناف</h3>
+            <span class="text-danger small fw-semibold"
+              ><i class="bi bi-exclamation-triangle"></i> تحتاج إعادة طلب</span
+            >
+          </div>
+          <div class="bg-danger bg-opacity-10 text-danger p-3 rounded-3 fs-4">
+            <i class="bi bi-shield-exclamation"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- طلبات الشراء النشطة -->
+    <div class="col-xl-3 col-md-6">
+      <div
+        class="card border-0 shadow-sm rounded-4 p-3 h-100 bg-white border-start border-4 border-warning"
+      >
+        <div class="d-flex justify-content-between align-items-start">
+          <div>
+            <span class="text-muted small fw-medium">أوامر الشراء قيد التنفيذ</span>
+            <h3 class="fw-bold text-dark mt-1 mb-2">7 طلبات</h3>
+            <span class="text-warning small fw-semibold"
+              ><i class="bi bi-clock-history"></i> بانتظار التوريد</span
+            >
+          </div>
+          <div class="bg-warning bg-opacity-10 text-warning p-3 rounded-3 fs-4">
+            <i class="bi bi-cart-check"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- إجمالي القيمة التقديرية -->
+    <div class="col-xl-3 col-md-6">
+      <div
+        class="card border-0 shadow-sm rounded-4 p-3 h-100 bg-white border-start border-4 border-info"
+      >
+        <div class="d-flex justify-content-between align-items-start">
+          <div>
+            <span class="text-muted small fw-medium">القيمة الإجمالية للمخزون</span>
+            <h3 class="fw-bold text-dark mt-1 mb-2">$ 185,400</h3>
+            <span class="text-info small fw-semibold"
+              ><i class="bi bi-tag"></i> موزع على 3 مستودعات</span
+            >
+          </div>
+          <div class="bg-info bg-opacity-10 text-info p-3 rounded-3 fs-4">
+            <i class="bi bi-cash-stack"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. شريط البحث والتصفية -->
+  <div class="card border-0 shadow-sm rounded-4 p-3 mb-4 bg-white">
+    <div class="row g-2 align-items-center justify-content-between">
+      <div class="col-lg-6 d-flex gap-2 flex-wrap">
+        <select class="form-select form-select-sm w-auto bg-light border-0 py-2">
+          <option selected>جميع المستودعات</option>
+          <option>المستودع الرئيسي - غزة</option>
+          <option>مستودع الطوارئ - دير البلح</option>
+          <option>مستودع الإمداد الطبي - خان يونس</option>
+        </select>
+        <select class="form-select form-select-sm w-auto bg-light border-0 py-2">
+          <option selected>تصنيف الأصناف (الكل)</option>
+          <option>مساعدات غذائية (طرود)</option>
+          <option>أدوية ومستلزمات طبية</option>
+          <option>مستلزمات إيواء وشتاء</option>
+          <option>قرطاسية ومستلزمات مدرسية</option>
+        </select>
+      </div>
+
+      <div class="col-lg-5 d-flex gap-2 justify-content-end">
+        <div
+          class="input-group input-group-sm bg-light rounded-pill border overflow-hidden"
+          style="width: 280px"
+        >
+          <span class="input-group-text bg-transparent border-0 text-success ps-3"
+            ><i class="bi bi-search"></i
+          ></span>
+          <input
+            type="text"
+            class="form-control bg-transparent border-0 shadow-none py-2"
+            placeholder="ابحث باسم الصنف، الكود.."
+          />
+        </div>
+        <button
+          class="btn btn-sm btn-light border px-3 rounded-3 text-secondary d-flex align-items-center gap-1"
+        >
+          <i class="bi bi-file-earmark-excel text-success"></i> تصدير
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. جدول إدارة المخزون والأصناف -->
+  <div class="card border-0 shadow-sm rounded-4 bg-white overflow-hidden">
+    <div
+      class="card-header bg-white border-0 py-3 px-4 d-flex justify-content-between align-items-center"
+    >
+      <h6 class="fw-bold text-dark m-0">سجل أصناف المستودعات وحالة المخزون</h6>
+      <span class="text-muted small">عرض أرصدة الأصناف المتاحة</span>
+    </div>
+
+    <div class="table-responsive">
+      <table class="table align-middle mb-0 text-nowrap">
+        <thead class="table-light text-muted small">
+          <tr>
+            <th class="py-3 px-4">كود الصنف / الاسم</th>
+            <th class="py-3">التصنيف</th>
+            <th class="py-3">المستودع</th>
+            <th class="py-3">الكمية المتاحة</th>
+            <th class="py-3">الحد الأدنى للطلب</th>
+            <th class="py-3">حالة المخزون</th>
+            <th class="py-3 text-end px-4">الإجراءات</th>
+          </tr>
+        </thead>
+        <tbody class="small">
+          <!-- صنف 1 -->
+          <tr>
+            <td class="px-4">
+              <div class="d-flex align-items-center gap-2">
+                <div
+                  class="bg-success bg-opacity-10 text-success rounded-circle d-flex align-items-center justify-content-center fw-bold"
+                  style="width: 35px; height: 35px; font-size: 0.8rem"
+                >
+                  <i class="bi bi-box"></i>
+                </div>
+                <div>
+                  <span class="fw-semibold text-dark d-block">سلال غذائية طارئة (متكاملة)</span>
+                  <span class="text-muted" style="font-size: 0.75rem">SKU-FOD-202</span>
+                </div>
+              </div>
+            </td>
+            <td><span class="badge bg-light text-dark border">مساعدات غذائية</span></td>
+            <td class="text-secondary">المستودع الرئيسي - غزة</td>
+            <td class="fw-bold text-dark">1,450 طرد</td>
+            <td class="text-muted">300 طرد</td>
+            <td>
+              <span class="badge bg-success bg-opacity-10 text-success px-2 py-1 rounded-pill"
+                >متوفر بكمية جيدة</span
+              >
+            </td>
+            <td class="text-end px-4">
+              <button
+                class="btn btn-sm btn-light text-secondary border-0 rounded-2 me-1"
+                title="عرض التفاصيل"
+              >
+                <i class="bi bi-eye"></i>
+              </button>
+              <button
+                class="btn btn-sm btn-light text-primary border-0 rounded-2 me-1"
+                title="تعديل"
+              >
+                <i class="bi bi-pencil"></i>
+              </button>
+              <button
+                class="btn btn-sm btn-light text-success border-0 rounded-2"
+                title="إصدار إذن صرف"
+              >
+                <i class="bi bi-box-arrow-left"></i>
+              </button>
+            </td>
+          </tr>
+
+          <!-- صنف 2 -->
+          <tr>
+            <td class="px-4">
+              <div class="d-flex align-items-center gap-2">
+                <div
+                  class="bg-primary bg-opacity-10 text-primary rounded-circle d-flex align-items-center justify-content-center fw-bold"
+                  style="width: 35px; height: 35px; font-size: 0.8rem"
+                >
+                  <i class="bi bi-capsule"></i>
+                </div>
+                <div>
+                  <span class="fw-semibold text-dark d-block">أدوية الأمراض المزمنة (مجموعة)</span>
+                  <span class="text-muted" style="font-size: 0.75rem">SKU-MED-510</span>
+                </div>
+              </div>
+            </td>
+            <td><span class="badge bg-light text-dark border">أدوية ومستلزمات طبية</span></td>
+            <td class="text-secondary">مستودع الإمداد الطبي</td>
+            <td class="fw-bold text-dark">320 وحدة</td>
+            <td class="text-muted">100 وحدة</td>
+            <td>
+              <span class="badge bg-success bg-opacity-10 text-success px-2 py-1 rounded-pill"
+                >متوفر</span
+              >
+            </td>
+            <td class="text-end px-4">
+              <button
+                class="btn btn-sm btn-light text-secondary border-0 rounded-2 me-1"
+                title="عرض التفاصيل"
+              >
+                <i class="bi bi-eye"></i>
+              </button>
+              <button
+                class="btn btn-sm btn-light text-primary border-0 rounded-2 me-1"
+                title="تعديل"
+              >
+                <i class="bi bi-pencil"></i>
+              </button>
+              <button
+                class="btn btn-sm btn-light text-success border-0 rounded-2"
+                title="إصدار إذن صرف"
+              >
+                <i class="bi bi-box-arrow-left"></i>
+              </button>
+            </td>
+          </tr>
+
+          <!-- صنف 3 -->
+          <tr>
+            <td class="px-4">
+              <div class="d-flex align-items-center gap-2">
+                <div
+                  class="bg-warning bg-opacity-10 text-warning rounded-circle d-flex align-items-center justify-content-center fw-bold"
+                  style="width: 35px; height: 35px; font-size: 0.8rem"
+                >
+                  <i class="bi bi-shield"></i>
+                </div>
+                <div>
+                  <span class="fw-semibold text-dark d-block">بطانيات ومستلزمات شتوية</span>
+                  <span class="text-muted" style="font-size: 0.75rem">SKU-WIN-104</span>
+                </div>
+              </div>
+            </td>
+            <td><span class="badge bg-light text-dark border">مستلزمات إيواء</span></td>
+            <td class="text-secondary">مستودع الطوارئ - دير البلح</td>
+            <td class="fw-bold text-danger">45 بطانية</td>
+            <td class="text-muted">150 بطانية</td>
+            <td>
+              <span class="badge bg-danger bg-opacity-10 text-danger px-2 py-1 rounded-pill"
+                >منخفض جداً (تحذير)</span
+              >
+            </td>
+            <td class="text-end px-4">
+              <button
+                class="btn btn-sm btn-light text-secondary border-0 rounded-2 me-1"
+                title="عرض التفاصيل"
+              >
+                <i class="bi bi-eye"></i>
+              </button>
+              <button
+                class="btn btn-sm btn-light text-primary border-0 rounded-2 me-1"
+                title="تعديل"
+              >
+                <i class="bi bi-pencil"></i>
+              </button>
+              <button
+                class="btn btn-sm btn-light text-success border-0 rounded-2"
+                title="إصدار إذن صرف"
+              >
+                <i class="bi bi-box-arrow-left"></i>
+              </button>
+            </td>
+          </tr>
+
+          <!-- صنف 4 -->
+          <tr>
+            <td class="px-4">
+              <div class="d-flex align-items-center gap-2">
+                <div
+                  class="bg-info bg-opacity-10 text-info rounded-circle d-flex align-items-center justify-content-center fw-bold"
+                  style="width: 35px; height: 35px; font-size: 0.8rem"
+                >
+                  <i class="bi bi-journal-text"></i>
+                </div>
+                <div>
+                  <span class="fw-semibold text-dark d-block">حقائب مدرسية وقرطاسية</span>
+                  <span class="text-muted" style="font-size: 0.75rem">SKU-EDU-309</span>
+                </div>
+              </div>
+            </td>
+            <td><span class="badge bg-light text-dark border">قرطاسية ومستلزمات مدرسية</span></td>
+            <td class="text-secondary">المستودع الرئيسي - غزة</td>
+            <td class="fw-bold text-dark">850 حقيبة</td>
+            <td class="text-muted">200 حقيبة</td>
+            <td>
+              <span class="badge bg-success bg-opacity-10 text-success px-2 py-1 rounded-pill"
+                >متوفر</span
+              >
+            </td>
+            <td class="text-end px-4">
+              <button
+                class="btn btn-sm btn-light text-secondary border-0 rounded-2 me-1"
+                title="عرض التفاصيل"
+              >
+                <i class="bi bi-eye"></i>
+              </button>
+              <button
+                class="btn btn-sm btn-light text-primary border-0 rounded-2 me-1"
+                title="تعديل"
+              >
+                <i class="bi bi-pencil"></i>
+              </button>
+              <button
+                class="btn btn-sm btn-light text-success border-0 rounded-2"
+                title="إصدار إذن صرف"
+              >
+                <i class="bi bi-box-arrow-left"></i>
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- تذييل الجدول والتنقل بين الصفحات -->
+    <div
+      class="card-footer bg-white border-0 py-3 px-4 d-flex justify-content-between align-items-center flex-wrap gap-2"
+    >
+      <span class="text-muted small">عرض 1 إلى 4 من أصل 1,240 صنفاً</span>
+      <nav aria-label="Page navigation">
+        <ul class="pagination pagination-sm mb-0">
+          <li class="page-item disabled"><a class="page-link" href="#">السابق</a></li>
+          <li class="page-item active">
+            <a class="page-link bg-success border-success" href="#">1</a>
+          </li>
+          <li class="page-item"><a class="page-link text-success" href="#">2</a></li>
+          <li class="page-item"><a class="page-link text-success" href="#">3</a></li>
+          <li class="page-item"><a class="page-link text-success" href="#">التالي</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>

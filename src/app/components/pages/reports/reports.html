@@ -1,0 +1,362 @@
+<div class="container-fluid py-3 px-4" dir="rtl">
+  <!-- 1. رأس الصفحة ومسار التنقل -->
+  <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-3">
+    <div>
+      <h3 class="fw-bold text-dark mb-1 d-flex align-items-center gap-2">
+        <i class="bi bi-file-earmark-bar-graph text-success"></i> التقارير والتحليلات
+      </h3>
+      <p class="text-muted small mb-0">
+        استخراج تقارير الأداء الشاملة للمشاريع، التبرعات، والمؤشرات الإنسانية (MEAL)
+      </p>
+    </div>
+    <div class="d-flex gap-2">
+      <button class="btn btn-success px-3 py-2 rounded-3 d-flex align-items-center gap-2 shadow-sm">
+        <i class="bi bi-download"></i> تصدير التقرير الشامل (PDF)
+      </button>
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb mb-0 small text-muted align-items-center h-100">
+          <li class="breadcrumb-item">
+            <a href="#" class="text-decoration-none text-success">الرئيسية</a>
+          </li>
+          <li class="breadcrumb-item active text-secondary" aria-current="page">التقارير</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+
+  <!-- 2. أدوات الفلترة وتحديد النطاق الزمني للتقارير -->
+  <div class="card border-0 shadow-sm rounded-4 p-3 mb-4 bg-white">
+    <div class="row g-2 align-items-center justify-content-between">
+      <div class="col-lg-8 d-flex flex-wrap gap-2">
+        <select class="form-select form-select-sm w-auto bg-light border-0 py-2">
+          <option selected>نوع التقرير: تقرير الأداء العام</option>
+          <option>تقرير التدفقات المالية والتبرعات</option>
+          <option>تقرير المؤشرات (MEAL & Indicators)</option>
+          <option>تقرير المستفيدين والمساعدات الموزعة</option>
+        </select>
+        <select class="form-select form-select-sm w-auto bg-light border-0 py-2">
+          <option selected>النطاق الزمني: العام الحالي (2026)</option>
+          <option>الربع الثالث (Q3)</option>
+          <option>الربع الثاني (Q2)</option>
+          <option>الشهر الحالي</option>
+          <option>تخصيص فترة زمنية...</option>
+        </select>
+        <select class="form-select form-select-sm w-auto bg-light border-0 py-2">
+          <option selected>جميع المشاريع</option>
+          <option>تعليم للجميع - المرحلة الثانية</option>
+          <option>دعم الرعاية الصحية الأولية</option>
+          <option>الأمن الغذائي - طرود الشتاء</option>
+        </select>
+      </div>
+      <div class="col-lg-3 d-flex justify-content-end">
+        <button
+          class="btn btn-sm btn-outline-success px-3 py-2 rounded-3 w-100 d-flex align-items-center justify-content-center gap-2"
+        >
+          <i class="bi bi-arrow-repeat"></i> تحديث البيانات
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. مؤشرات الأداء السريعة (KPIs) -->
+  <div class="row g-3 mb-4">
+    <div class="col-xl-3 col-md-6">
+      <div class="card border-0 shadow-sm rounded-4 p-3 h-100 bg-white">
+        <div class="d-flex align-items-center gap-3">
+          <div class="bg-success bg-opacity-10 text-success p-3 rounded-3 fs-4">
+            <i class="bi bi-graph-up-arrow"></i>
+          </div>
+          <div>
+            <span class="text-muted small">معدل الإنجاز الإجمالي</span>
+            <h4 class="fw-bold text-dark mb-0 mt-1">82.4%</h4>
+            <span class="text-success small fw-semibold"
+              ><i class="bi bi-check2"></i> ضمن الخطط التشغيلية</span
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-xl-3 col-md-6">
+      <div class="card border-0 shadow-sm rounded-4 p-3 h-100 bg-white">
+        <div class="d-flex align-items-center gap-3">
+          <div class="bg-primary bg-opacity-10 text-primary p-3 rounded-3 fs-4">
+            <i class="bi bi-people"></i>
+          </div>
+          <div>
+            <span class="text-muted small">إجمالي المستفيدين المباشرين</span>
+            <h4 class="fw-bold text-dark mb-0 mt-1">14,250</h4>
+            <span class="text-primary small fw-semibold"
+              ><i class="bi bi-person-plus"></i> مستفيد ومستفيدة</span
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-xl-3 col-md-6">
+      <div class="card border-0 shadow-sm rounded-4 p-3 h-100 bg-white">
+        <div class="d-flex align-items-center gap-3">
+          <div class="bg-warning bg-opacity-10 text-warning p-3 rounded-3 fs-4">
+            <i class="bi bi-pie-chart"></i>
+          </div>
+          <div>
+            <span class="text-muted small">الموازنة المصروفة</span>
+            <h4 class="fw-bold text-dark mb-0 mt-1">$ 285,400</h4>
+            <span class="text-warning small fw-semibold">68% من إجمالي التمويل</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-xl-3 col-md-6">
+      <div class="card border-0 shadow-sm rounded-4 p-3 h-100 bg-white">
+        <div class="d-flex align-items-center gap-3">
+          <div class="bg-info bg-opacity-10 text-info p-3 rounded-3 fs-4">
+            <i class="bi bi-clipboard-check"></i>
+          </div>
+        </div>
+        <div>
+          <span class="text-muted small">الأنشطة المنفذة ميدانياً</span>
+          <h4 class="fw-bold text-dark mb-0 mt-1">48 نشاطاً</h4>
+          <span class="text-info small fw-semibold">مكتملة وموثقة</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 4. قسم الرسوم البيانية والجداول التحليلية -->
+<div class="row g-3 mb-4">
+  <!-- الرسم البياني الأول: حركة التبرعات الشهرية -->
+  <div class="col-lg-8">
+    <div class="card border-0 shadow-sm rounded-4 p-4 h-100 bg-white">
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <h5 class="fw-bold text-dark m-0">تحليل التدفقات المالية (التبرعات مقابل الصرفيات)</h5>
+        <div class="dropdown">
+          <button
+            class="btn btn-sm btn-light border text-muted dropdown-toggle"
+            type="button"
+            data-bs-toggle="dropdown"
+          >
+            شهرياً
+          </button>
+          <ul class="dropdown-menu shadow-sm border-0 small">
+            <li><a class="dropdown-item" href="#">شهرياً</a></li>
+            <li><a class="dropdown-item" href="#">ربع سنوياً</a></li>
+            <li><a class="dropdown-item" href="#">سنوياً</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="text-muted small mb-4">
+        مقارنة بين إجمالي الأموال الواردة من المانحين والمصروفات الفعلية على المشاريع.
+      </p>
+
+      <!-- محاكاة رسم بياني باستخدام عناصر Bootstrap (Progress Bars / Visual Bars) -->
+      <div class="d-flex flex-column gap-3 py-2">
+        <div>
+          <div class="d-flex justify-content-between small mb-1">
+            <span class="fw-semibold text-dark">يناير</span>
+            <span class="text-muted">الوارد: $45,000 | الصرف: $38,000</span>
+          </div>
+          <div class="progress rounded-pill" style="height: 10px">
+            <div class="progress-bar bg-success" style="width: 85%"></div>
+          </div>
+        </div>
+        <div>
+          <div class="d-flex justify-content-between small mb-1">
+            <span class="fw-semibold text-dark">فبراير</span>
+            <span class="text-muted">الوارد: $60,000 | الصرف: $52,000</span>
+          </div>
+          <div class="progress rounded-pill" style="height: 10px">
+            <div class="progress-bar bg-success" style="width: 90%"></div>
+          </div>
+        </div>
+        <div>
+          <div class="d-flex justify-content-between small mb-1">
+            <span class="fw-semibold text-dark">مارس</span>
+            <span class="text-muted">الوارد: $30,000 | الصرف: $29,000</span>
+          </div>
+          <div class="progress rounded-pill" style="height: 10px">
+            <div class="progress-bar bg-success" style="width: 95%"></div>
+          </div>
+        </div>
+        <div>
+          <div class="d-flex justify-content-between small mb-1">
+            <span class="fw-semibold text-dark">أبريل</span>
+            <span class="text-muted">الوارد: $75,000 | الصرف: $64,000</span>
+          </div>
+          <div class="progress rounded-pill" style="height: 10px">
+            <div class="progress-bar bg-success" style="width: 82%"></div>
+          </div>
+        </div>
+        <div>
+          <div class="d-flex justify-content-between small mb-1">
+            <span class="fw-semibold text-dark">مايو</span>
+            <span class="text-muted">الوارد: $50,000 | الصرف: $48,000</span>
+          </div>
+          <div class="progress rounded-pill" style="height: 10px">
+            <div class="progress-bar bg-success" style="width: 96%"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- الرسم البياني الثاني: توزيع المساعدات حسب القطاعات -->
+  <div class="col-lg-4">
+    <div class="card border-0 shadow-sm rounded-4 p-4 h-100 bg-white">
+      <h5 class="fw-bold text-dark mb-2">توزيع الدعم حسب القطاعات</h5>
+      <p class="text-muted small mb-4">نسب الاستجابة والإنفاق في القطاعات المختلفة.</p>
+
+      <div class="d-flex flex-column gap-3">
+        <div>
+          <div class="d-flex justify-content-between small mb-1">
+            <span class="fw-semibold text-secondary"
+              ><i class="bi bi-circle-fill text-success fs-7 me-1"></i> الأمن الغذائي</span
+            >
+            <span class="fw-bold text-dark">45%</span>
+          </div>
+          <div class="progress" style="height: 6px">
+            <div class="progress-bar bg-success rounded-pill" style="width: 45%"></div>
+          </div>
+        </div>
+
+        <div>
+          <div class="d-flex justify-content-between small mb-1">
+            <span class="fw-semibold text-secondary"
+              ><i class="bi bi-circle-fill text-primary fs-7 me-1"></i> الرعاية الصحية</span
+            >
+            <span class="fw-bold text-dark">30%</span>
+          </div>
+          <div class="progress" style="height: 6px">
+            <div class="progress-bar bg-primary rounded-pill" style="width: 30%"></div>
+          </div>
+        </div>
+
+        <div>
+          <div class="d-flex justify-content-between small mb-1">
+            <span class="fw-semibold text-secondary"
+              ><i class="bi bi-circle-fill text-warning fs-7 me-1"></i> التعليم</span
+            >
+            <span class="fw-bold text-dark">15%</span>
+          </div>
+          <div class="progress" style="height: 6px">
+            <div class="progress-bar bg-warning rounded-pill" style="width: 15%"></div>
+          </div>
+        </div>
+
+        <div>
+          <div class="d-flex justify-content-between small mb-1">
+            <span class="fw-semibold text-secondary"
+              ><i class="bi bi-circle-fill text-info fs-7 me-1"></i> الإيواء وسبل العيش</span
+            >
+            <span class="fw-bold text-dark">10%</span>
+          </div>
+          <div class="progress" style="height: 6px">
+            <div class="progress-bar bg-info rounded-pill" style="width: 10%"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-4 pt-3 border-top text-center">
+        <button class="btn btn-sm btn-light text-success fw-semibold w-100">
+          عرض تفاصيل القطاعات <i class="bi bi-arrow-left"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 5. جدول ملخص تقارير المشاريع النشطة -->
+<div class="card border-0 shadow-sm rounded-4 bg-white overflow-hidden">
+  <div
+    class="card-header bg-white border-0 py-3 px-4 d-flex justify-content-between align-items-center"
+  >
+    <h6 class="fw-bold text-dark m-0">ملخص أداء المشاريع التشغيلية</h6>
+    <span class="badge bg-success bg-opacity-10 text-success px-3 py-1 small">محدث تلقائياً</span>
+  </div>
+
+  <div class="table-responsive">
+    <table class="table align-middle mb-0 text-nowrap">
+      <thead class="table-light text-muted small">
+        <tr>
+          <th class="py-3 px-4">اسم المشروع</th>
+          <th class="py-3">القطاع</th>
+          <th class="py-3">الموازنة المرصودة</th>
+          <th class="py-3">المبلغ المصروف</th>
+          <th class="py-3">نسبة الإنجاز</th>
+          <th class="py-3 text-end px-4">تحميل التقرير</th>
+        </tr>
+      </thead>
+      <tbody class="small">
+        <tr>
+          <td class="px-4 fw-semibold text-dark">تعليم للجميع - المرحلة الثانية</td>
+          <td><span class="badge bg-light text-dark border">التعليم</span></td>
+          <td>$ 120,000</td>
+          <td>$ 90,000</td>
+          <td>
+            <div class="d-flex align-items-center gap-2">
+              <div class="progress flex-grow-1" style="height: 5px; width: 100px">
+                <div class="progress-bar bg-success" style="width: 75%"></div>
+              </div>
+              <span class="fw-bold text-success">75%</span>
+            </div>
+          </td>
+          <td class="text-end px-4">
+            <button class="btn btn-sm btn-outline-success rounded-pill px-3 py-1">
+              <i class="bi bi-file-earmark-pdf"></i> PDF
+            </button>
+            <button class="btn btn-sm btn-outline-secondary rounded-pill px-3 py-1 ms-1">
+              <i class="bi bi-file-earmark-excel"></i> Excel
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td class="px-4 fw-semibold text-dark">دعم الرعاية الصحية الأولية</td>
+          <td><span class="badge bg-light text-dark border">الصحة</span></td>
+          <td>$ 250,000</td>
+          <td>$ 100,000</td>
+          <td>
+            <div class="d-flex align-items-center gap-2">
+              <div class="progress flex-grow-1" style="height: 5px; width: 100px">
+                <div class="progress-bar bg-primary" style="width: 40%"></div>
+              </div>
+              <span class="fw-bold text-primary">40%</span>
+            </div>
+          </td>
+          <td class="text-end px-4">
+            <button class="btn btn-sm btn-outline-success rounded-pill px-3 py-1">
+              <i class="bi bi-file-earmark-pdf"></i> PDF
+            </button>
+            <button class="btn btn-sm btn-outline-secondary rounded-pill px-3 py-1 ms-1">
+              <i class="bi bi-file-earmark-excel"></i> Excel
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td class="px-4 fw-semibold text-dark">الأمن الغذائي - طرود الشتاء</td>
+          <td><span class="badge bg-light text-dark border">الأمن الغذائي</span></td>
+          <td>$ 180,000</td>
+          <td>$ 180,000</td>
+          <td>
+            <div class="d-flex align-items-center gap-2">
+              <div class="progress flex-grow-1" style="height: 5px; width: 100px">
+                <div class="progress-bar bg-info" style="width: 100%"></div>
+              </div>
+              <span class="fw-bold text-info">100%</span>
+            </div>
+          </td>
+          <td class="text-end px-4">
+            <button class="btn btn-sm btn-outline-success rounded-pill px-3 py-1">
+              <i class="bi bi-file-earmark-pdf"></i> PDF
+            </button>
+            <button class="btn btn-sm btn-outline-secondary rounded-pill px-3 py-1 ms-1">
+              <i class="bi bi-file-earmark-excel"></i> Excel
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

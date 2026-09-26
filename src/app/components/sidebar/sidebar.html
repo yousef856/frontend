@@ -1,0 +1,100 @@
+<nav
+  class="sidebar-container text-white p-3 d-flex flex-column justify-content-between h-100"
+  [class.sidebar-collapsed]="collapsed"
+  dir="rtl"
+>
+  <div>
+    <!-- شعار المنظمة بروح أوراق الشجر -->
+    <div class="text-center mb-4 pb-3 border-bottom border-success border-opacity-25">
+      <div class="d-flex align-items-center justify-content-center gap-2 mb-1">
+        <i class="bi bi-tree-fill text-leaf fs-3"></i>
+        <h4 class="sidebar-label fw-bold m-0">NGO ERP</h4>
+      </div>
+      <small class="sidebar-label text-leaf-light tracking-wide">Empower Communities</small>
+    </div>
+
+    <!-- القائمة الجانبية -->
+    <ul class="nav nav-pills flex-column gap-1">
+      <li class="nav-item">
+        <a
+          routerLink="/home"
+          routerLinkActive="active-leaf"
+          [routerLinkActiveOptions]="{ exact: true }"
+          class="nav-link"
+          title="الرئيسية"
+        >
+          <i class="bi bi-house-door"></i>
+          <span class="sidebar-label">الرئيسية</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a
+          routerLink="/beneficiaries"
+          routerLinkActive="active-leaf"
+          class="nav-link"
+          title="المستفيدين"
+        >
+          <i class="bi bi-people-fill"></i>
+          <span class="sidebar-label">المستفيدين</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a
+          routerLink="/projects"
+          routerLinkActive="active-leaf"
+          class="nav-link"
+          title="المشاريع والبرامج"
+        >
+          <i class="bi bi-folder2-open"></i>
+          <span class="sidebar-label">المشاريع والبرامج</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="/donations" routerLinkActive="active-leaf" class="nav-link" title="التبرعات">
+          <i class="bi bi-heart-fill"></i>
+          <span class="sidebar-label">التبرعات</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="/reports" routerLinkActive="active-leaf" class="nav-link" title="التقارير">
+          <i class="bi bi-file-earmark-bar-graph"></i>
+          <span class="sidebar-label">التقارير</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a
+          routerLink="/human-resources"
+          routerLinkActive="active-leaf"
+          class="nav-link"
+          title="الموارد البشرية"
+        >
+          <i class="bi bi-person-badge"></i>
+          <span class="sidebar-label">الموارد البشرية</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a
+          routerLink="/inventory"
+          routerLinkActive="active-leaf"
+          class="nav-link"
+          title="المخزون والمشتريات"
+        >
+          <i class="bi bi-box-seam"></i>
+          <span class="sidebar-label">المخزون والمشتريات</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="/finance" routerLinkActive="active-leaf" class="nav-link" title="المالية">
+          <i class="bi bi-wallet2"></i>
+          <span class="sidebar-label">المالية</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="/settings" routerLinkActive="active-leaf" class="nav-link" title="الإعدادات">
+          <i class="bi bi-gear"></i>
+          <span class="sidebar-label">الإعدادات</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>

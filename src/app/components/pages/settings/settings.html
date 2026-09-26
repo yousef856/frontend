@@ -1,0 +1,342 @@
+<div class="container-fluid py-3 px-4" dir="rtl">
+  <!-- 1. رأس الصفحة ومسار التنقل -->
+  <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-3">
+    <div>
+      <h3 class="fw-bold text-dark mb-1 d-flex align-items-center gap-2">
+        <i class="bi bi-gear text-success"></i> إعدادات النظام
+      </h3>
+      <p class="text-muted small mb-0">
+        إدارة معلومات المنظمة، تفضيلات النظام، الصلاحيات، وإعدادات الربط والنسخ الاحتياطي
+      </p>
+    </div>
+    <div class="d-flex gap-2">
+      <button class="btn btn-success px-3 py-2 rounded-3 d-flex align-items-center gap-2 shadow-sm">
+        <i class="bi bi-check-lg"></i> حفظ التغييرات
+      </button>
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb mb-0 small text-muted align-items-center h-100">
+          <li class="breadcrumb-item">
+            <a href="#" class="text-decoration-none text-success">الرئيسية</a>
+          </li>
+          <li class="breadcrumb-item active text-secondary" aria-current="page">الإعدادات</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+
+  <!-- 2. محتوى الإعدادات مقسم عبر تبويبات (Tabs) -->
+  <div class="row">
+    <div class="col-12">
+      <!-- شريط التنقل بين الأقسام -->
+      <ul class="nav nav-pills mb-4 gap-2 border-bottom pb-3" id="settingsTab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link active rounded-3 px-3 py-2 small fw-semibold d-flex align-items-center gap-2"
+            id="general-tab"
+            data-bs-toggle="pill"
+            data-bs-target="#general"
+            type="button"
+            role="tab"
+          >
+            <i class="bi bi-building"></i> معلومات المنظمة
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link rounded-3 px-3 py-2 small fw-semibold d-flex align-items-center gap-2 text-dark"
+            id="preferences-tab"
+            data-bs-toggle="pill"
+            data-bs-target="#preferences"
+            type="button"
+            role="tab"
+          >
+            <i class="bi bi-sliders"></i> التفضيلات العامة
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link rounded-3 px-3 py-2 small fw-semibold d-flex align-items-center gap-2 text-dark"
+            id="users-tab"
+            data-bs-toggle="pill"
+            data-bs-target="#users"
+            type="button"
+            role="tab"
+          >
+            <i class="bi bi-people"></i> المستخدمون والصلاحيات
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link rounded-3 px-3 py-2 small fw-semibold d-flex align-items-center gap-2 text-dark"
+            id="backup-tab"
+            data-bs-toggle="pill"
+            data-bs-target="#backup"
+            type="button"
+            role="tab"
+          >
+            <i class="bi bi-database"></i> النسخ الاحتياطي والأمان
+          </button>
+        </li>
+      </ul>
+
+      <!-- محتوى التبويبات -->
+      <div class="tab-content" id="settingsTabContent">
+        <!-- التبويب الأول: معلومات المنظمة -->
+        <div class="tab-pane fade show active" id="general" role="tabpanel">
+          <div class="card border-0 shadow-sm rounded-4 p-4 bg-white">
+            <h5 class="fw-bold text-dark mb-3">البيانات التعريفية للمؤسسة / الجمعية</h5>
+            <p class="text-muted small mb-4">
+              هذه البيانات تظهر تلقائياً في التقارير الرسمية، الترويسات، وسندات الصرف والقبض.
+            </p>
+
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label class="form-label small fw-medium text-secondary"
+                  >اسم المؤسسة (بالعربية)</label
+                >
+                <input
+                  type="text"
+                  class="form-control bg-light border-0 py-2"
+                  value="مؤسسة غزة للحلول الإنسانية والتنموية"
+                />
+              </div>
+              <div class="col-md-6">
+                <label class="form-label small fw-medium text-secondary"
+                  >اسم المؤسسة (بالإنجليزية)</label
+                >
+                <input
+                  type="text"
+                  class="form-control bg-light border-0 py-2"
+                  dir="ltr"
+                  value="Gaza Humanitarian & Development Foundation"
+                />
+              </div>
+              <div class="col-md-4">
+                <label class="form-label small fw-medium text-secondary"
+                  >الرقم التسجيلي / الترخيص</label
+                >
+                <input
+                  type="text"
+                  class="form-control bg-light border-0 py-2"
+                  value="NGO-2026-8841"
+                />
+              </div>
+              <div class="col-md-4">
+                <label class="form-label small fw-medium text-secondary"
+                  >البريد الإلكتروني الرسمي</label
+                >
+                <input
+                  type="email"
+                  class="form-control bg-light border-0 py-2"
+                  dir="ltr"
+                  value="info@gazango-erp.org"
+                />
+              </div>
+              <div class="col-md-4">
+                <label class="form-label small fw-medium text-secondary">رقم الهاتف الأساسي</label>
+                <input
+                  type="text"
+                  class="form-control bg-light border-0 py-2"
+                  dir="ltr"
+                  value="+970 8 282 0000"
+                />
+              </div>
+              <div class="col-12">
+                <label class="form-label small fw-medium text-secondary"
+                  >العنوان الرئيسي للمقر</label
+                >
+                <input
+                  type="text"
+                  class="form-control bg-light border-0 py-2"
+                  value="فلسطين، غزة - شارع الرشيد، المجمع الإداري الرئيسي"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- التبويب الثاني: التفضيلات العامة -->
+        <div class="tab-pane fade" id="preferences" role="tabpanel">
+          <div class="card border-0 shadow-sm rounded-4 p-4 bg-white">
+            <h5 class="fw-bold text-dark mb-3">إعدادات واجهة المستخدم والنظام</h5>
+            <p class="text-muted small mb-4">
+              تحكم في خيارات العرض، العملات المعتمدة، وتنسيقات التاريخ.
+            </p>
+
+            <div class="row g-4">
+              <div class="col-md-6">
+                <label class="form-label small fw-medium text-secondary"
+                  >لغة النظام الافتراضية</label
+                >
+                <select class="form-select bg-light border-0 py-2">
+                  <option selected>العربية (Arabic)</option>
+                  <option>الإنجليزية (English)</option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label small fw-medium text-secondary"
+                  >العملة الأساسية للمعاملات المالية</label
+                >
+                <select class="form-select bg-light border-0 py-2">
+                  <option selected>دولار أمريكي ($ - USD)</option>
+                  <option>يورو (€ - EUR)</option>
+                  <option>شيكل إسرائيلي (₪ - ILS)</option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label small fw-medium text-secondary"
+                  >تنسيق التاريخ والوقت</label
+                >
+                <select class="form-select bg-light border-0 py-2">
+                  <option selected>DD/MM/YYYY (26/09/2026)</option>
+                  <option>YYYY-MM-DD (2026-09-26)</option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label small fw-medium text-secondary">المنطقة الزمنية</label>
+                <select class="form-select bg-light border-0 py-2">
+                  <option selected>(GMT+2:00) توقيت القدس / القاهرة</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- التبويب الثالث: المستخدمون والصلاحيات -->
+        <div class="tab-pane fade" id="users" role="tabpanel">
+          <div class="card border-0 shadow-sm rounded-4 p-4 bg-white">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <div>
+                <h5 class="fw-bold text-dark mb-1">إدارة مستخدمي النظام والصلاحيات</h5>
+                <p class="text-muted small mb-0">
+                  تحديد أدوار الموظفين وصلاحيات الوصول للوحدات المختلفة
+                </p>
+              </div>
+              <button class="btn btn-sm btn-success px-3 rounded-3 d-flex align-items-center gap-1">
+                <i class="bi bi-person-plus"></i> إضافة مستخدم جديد
+              </button>
+            </div>
+
+            <div class="table-responsive mt-3">
+              <table class="table align-middle mb-0 text-nowrap">
+                <thead class="table-light text-muted small">
+                  <tr>
+                    <th class="py-3 px-3">اسم المستخدم</th>
+                    <th class="py-3">البريد الإلكتروني</th>
+                    <th class="py-3">الدور / الوظيفة</th>
+                    <th class="py-3">حالة الحساب</th>
+                    <th class="py-3 text-end px-3">الإجراءات</th>
+                  </tr>
+                </thead>
+                <tbody class="small">
+                  <tr>
+                    <td class="px-3 fw-semibold text-dark">المهندس يوسف ابولولي</td>
+                    <td class="text-muted">yousef@gazango-erp.org</td>
+                    <td>
+                      <span class="badge bg-success bg-opacity-10 text-success border"
+                        >مدير النظام (Admin)</span
+                      >
+                    </td>
+                    <td>
+                      <span
+                        class="badge bg-success bg-opacity-10 text-success px-2 py-1 rounded-pill"
+                        >نشط</span
+                      >
+                    </td>
+                    <td class="text-end px-3">
+                      <button
+                        class="btn btn-sm btn-light text-primary border-0 rounded-2 me-1"
+                        title="تعديل الصلاحيات"
+                      >
+                        <i class="bi bi-pencil"></i>
+                      </button>
+                      <button
+                        class="btn btn-sm btn-light text-danger border-0 rounded-2"
+                        title="إيقاف الحساب"
+                      >
+                        <i class="bi bi-lock"></i>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="px-3 fw-semibold text-dark">أحمد المظلوم</td>
+                    <td class="text-muted">ahmad@gazango-erp.org</td>
+                    <td>
+                      <span class="badge bg-primary bg-opacity-10 text-primary border"
+                        >مسؤول مالي ومحاسب</span
+                      >
+                    </td>
+                    <td>
+                      <span
+                        class="badge bg-success bg-opacity-10 text-success px-2 py-1 rounded-pill"
+                        >نشط</span
+                      >
+                    </td>
+                    <td class="text-end px-3">
+                      <button
+                        class="btn btn-sm btn-light text-primary border-0 rounded-2 me-1"
+                        title="تعديل الصلاحيات"
+                      >
+                        <i class="bi bi-pencil"></i>
+                      </button>
+                      <button
+                        class="btn btn-sm btn-light text-danger border-0 rounded-2"
+                        title="إيقاف الحساب"
+                      >
+                        <i class="bi bi-lock"></i>
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- التبويب الرابع: النسخ الاحتياطي والأمان -->
+        <div class="tab-pane fade" id="backup" role="tabpanel">
+          <div class="card border-0 shadow-sm rounded-4 p-4 bg-white">
+            <h5 class="fw-bold text-dark mb-3">حماية البيانات والنسخ الاحتياطي</h5>
+            <p class="text-muted small mb-4">
+              إنشاء نسخ احتياطية لقاعدة البيانات وضمان أمن واستمرارية النظام.
+            </p>
+
+            <div class="d-flex flex-column gap-3">
+              <div
+                class="p-3 bg-light rounded-4 d-flex justify-content-between align-items-center flex-wrap gap-3"
+              >
+                <div>
+                  <h6 class="fw-bold text-dark mb-1">
+                    تصدير نسخة احتياطية كاملة (Database Backup)
+                  </h6>
+                  <span class="text-muted small"
+                    >آخر نسخة احتياطية تمت اليوم الساعة 02:00 صباحاً</span
+                  >
+                </div>
+                <button
+                  class="btn btn-sm btn-success px-3 py-2 rounded-3 d-flex align-items-center gap-2"
+                >
+                  <i class="bi bi-cloud-arrow-down"></i> تحميل نسخة جديدة الآن
+                </button>
+              </div>
+
+              <div
+                class="p-3 bg-light rounded-4 d-flex justify-content-between align-items-center flex-wrap gap-3"
+              >
+                <div>
+                  <h6 class="fw-bold text-dark mb-1">النسخ الاحتياطي التلقائي اليومي</h6>
+                  <span class="text-muted small"
+                    >حفظ نسخة مشفرة تلقائياً على السحابة كل 24 ساعة</span
+                  >
+                </div>
+                <div class="form-check form-switch fs-5">
+                  <input class="form-check-input" type="checkbox" checked id="autoBackupSwitch" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

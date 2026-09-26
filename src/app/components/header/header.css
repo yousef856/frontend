@@ -1,0 +1,118 @@
+header.navbar {
+  border-color: #e2e8f0 !important;
+}
+
+/* تنسيق شريط البحث ليتناسب مع الهوية الخضراء عند التركيز */
+.input-group:focus-within {
+  border-color: #2d6a4f !important;
+  box-shadow: 0 0 0 0.2rem rgba(45, 106, 79, 0.15);
+  background-color: #fff !important;
+}
+/* إخفاء سهم القائمة المنسدلة الافتراضي عن الأيقونات والأزرار الدائرية */
+.dropdown-toggle.no-arrow::after {
+  display: none !important;
+}
+
+/* تأثير عند المرور على عناصر القائمة المنسدلة */
+.dropdown-item:hover {
+  background-color: rgba(45, 106, 79, 0.1);
+  color: #2d6a4f;
+}
+
+.site-header {
+  position: relative;
+  z-index: 10;
+  min-height: 68px;
+  border-color: #e2e8f0 !important;
+}
+
+.header-inner {
+  display: grid;
+  grid-template-columns: auto minmax(220px, 1fr) auto;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.header-menu-button {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border: 0;
+  border-radius: 12px;
+  color: #287a52;
+  background: #eef8f1;
+}
+
+.header-menu-button i {
+  font-size: 1.6rem;
+}
+
+.header-menu-button:hover,
+.header-icon-button:hover {
+  color: #14532d;
+  background: #dff1e4;
+}
+
+.header-search {
+  width: min(100%, 480px);
+  justify-self: center;
+}
+
+.header-search .input-group {
+  min-height: 40px;
+  border-color: #e2e8f0 !important;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  justify-self: end;
+  gap: 0.65rem;
+}
+
+.header-icon-button {
+  display: grid;
+  width: 40px;
+  height: 40px;
+  place-items: center;
+  padding: 0;
+  border: 1px solid #e8eee9;
+  border-radius: 50%;
+  color: #287a52 !important;
+  background-color: #f7faf8;
+}
+
+.header-profile {
+  margin-inline-start: 0.35rem;
+}
+
+.header-profile-info h6 {
+  white-space: nowrap;
+}
+
+@media (max-width: 767.98px) {
+  .header-inner {
+    grid-template-columns: auto 1fr;
+    gap: 0.75rem;
+  }
+
+  .header-actions {
+    gap: 0.4rem;
+  }
+
+  .header-search {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    width: 100%;
+  }
+
+  .header-profile-info {
+    display: none;
+  }
+
+  .header-profile {
+    padding-inline-start: 0.5rem !important;
+    margin-inline-start: 0;
+  }
+}

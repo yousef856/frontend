@@ -1,5 +1,18 @@
-<app-header></app-header>
-<div class="container">
-  <app-products></app-products>
+<div class="container-fluid p-0" dir="rtl">
+  <div class="row g-0">
+    <div class="sidebar-column" [class.sidebar-collapsed]="isSidebarHidden">
+      <app-sidebar [collapsed]="isSidebarHidden"></app-sidebar>
+    </div>
+
+    <div class="main-column d-flex flex-column min-vh-100 bg-light">
+      <app-header (toggleSidebarEvent)="onToggleSidebar()"> </app-header>
+
+      <main class="flex-fill p-4">
+        <router-outlet></router-outlet>
+      </main>
+
+      <!-- الفوتر -->
+      <app-footer></app-footer>
+    </div>
+  </div>
 </div>
-<app-footer></app-footer>
